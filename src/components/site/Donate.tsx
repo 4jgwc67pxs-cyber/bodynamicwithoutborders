@@ -88,7 +88,7 @@ export const Donate = () => {
                       >
                         ${a}
                         {a === 250 && !custom && (
-                          <span className="absolute -top-2 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full">
+                          <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground text-[9px] leading-none font-bold uppercase tracking-wider px-2 py-1 rounded-full shadow-soft whitespace-nowrap">
                             Popular
                           </span>
                         )}
