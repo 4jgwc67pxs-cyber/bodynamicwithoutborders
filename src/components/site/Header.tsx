@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.jpg";
 
 const links = [
@@ -7,7 +8,7 @@ const links = [
   { href: "#ukraine", label: "Ukraine" },
   { href: "#work", label: "What we do" },
   { href: "#impact", label: "Impact" },
-  { href: "#stories", label: "Stories" },
+  { href: "/stories", label: "Stories" },
   { href: "#about", label: "About" },
 ];
 

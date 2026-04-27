@@ -1,5 +1,6 @@
 import taras from "@/assets/taras.jpg";
 import { ArrowRight, Quote } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Story = () => (
   <section id="stories" className="py-20 md:py-28 bg-primary text-primary-foreground relative overflow-hidden">
@@ -32,9 +33,9 @@ export const Story = () => (
           in Ditte Marcher's Equal to Equal training, body-based trauma work helped him rebuild a relationship,
           enroll in university, and re-enter civilian life with presence instead of reaction.
         </p>
-        <a href="#" className="mt-7 inline-flex items-center gap-2 text-white border-b border-accent pb-1 font-medium hover:gap-3 transition-all">
+        <Link to="/stories" className="mt-7 inline-flex items-center gap-2 text-white border-b border-accent pb-1 font-medium hover:gap-3 transition-all">
           Read more stories <ArrowRight size={16} />
-        </a>
+        </Link>
       </div>
     </div>
   </section>

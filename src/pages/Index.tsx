@@ -8,6 +8,7 @@ import { Team } from "@/components/site/Team";
 import { Story } from "@/components/site/Story";
 import { Global } from "@/components/site/Global";
 import { Donate } from "@/components/site/Donate";
+import { MidDonateBanner } from "@/components/site/MidDonateBanner";
 import { Footer } from "@/components/site/Footer";
 import { useReveal } from "@/hooks/useReveal";
 
@@ -32,6 +33,7 @@ const Index = () => {
         <Stats />
         <UkraineSection />
         <Work />
+        <MidDonateBanner />
         <Team />
         <Story />
         <Global />
