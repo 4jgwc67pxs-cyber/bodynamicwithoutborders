@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
 import { Stats } from "@/components/site/Stats";
+import { Method } from "@/components/site/Method";
 import { UkraineSection } from "@/components/site/UkraineSection";
 import { Work } from "@/components/site/Work";
 import { Team } from "@/components/site/Team";
@@ -31,6 +32,7 @@ const Index = () => {
       <main>
         <Hero />
         <Stats />
+        <Method />
         <UkraineSection />
         <Work />
         <MidDonateBanner />
