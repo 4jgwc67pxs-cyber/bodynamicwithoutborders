@@ -63,6 +63,22 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        display: ['Outfit', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['Figtree', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
+      backgroundImage: {
+        'gradient-navy': 'var(--gradient-navy)',
+        'gradient-hero-overlay': 'var(--gradient-hero-overlay)',
+      },
+      boxShadow: {
+        elegant: 'var(--shadow-elegant)',
+        soft: 'var(--shadow-soft)',
+        card: 'var(--shadow-card)',
+      },
+      transitionTimingFunction: {
+        smooth: 'cubic-bezier(0.22, 1, 0.36, 1)',
+      },
       keyframes: {
         "accordion-down": {
           from: {
@@ -80,10 +96,20 @@ export default {
             height: "0",
           },
         },
+        "fade-up": {
+          from: { opacity: "0", transform: "translateY(20px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "ken-burns": {
+          "0%": { transform: "scale(1)" },
+          "100%": { transform: "scale(1.08)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-up": "fade-up 0.9s cubic-bezier(0.22,1,0.36,1) both",
+        "ken-burns": "ken-burns 18s ease-out forwards",
       },
     },
   },
