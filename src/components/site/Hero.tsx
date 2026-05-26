@@ -10,8 +10,6 @@ export const Hero = () => (
         alt="Trauma-informed humanitarian response"
         className="absolute inset-0 w-full h-full object-cover animate-ken-burns"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/20 to-primary/95" />
-      <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-primary via-primary/80 to-transparent" />
 
       <div className="absolute inset-0 flex flex-col justify-end px-6 pb-14 pt-24 safe-area-bottom">
         <div className="animate-fade-up">
@@ -38,9 +36,6 @@ export const Hero = () => (
         alt="Trauma-informed humanitarian response"
         className="absolute inset-0 w-full h-full object-cover animate-ken-burns"
       />
-      {/* Left-side darkening so headline reads on photo */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/40 to-transparent" />
-      <div className="absolute inset-0 bg-primary/10" />
 
       <div className="relative h-full container-narrow">
         <div className="grid grid-cols-12 gap-8 h-full items-center">
