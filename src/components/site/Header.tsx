@@ -33,8 +33,8 @@ export const Header = () => {
           <span className="w-9 h-9 md:w-10 md:h-10 rounded-md overflow-hidden bg-primary shrink-0">
             <img src={logo} alt="Bodynamic Without Borders" className="w-full h-full object-cover" />
           </span>
-          <span className="font-display text-base md:text-lg font-semibold text-primary leading-tight">
-            Bodynamic <em className="not-italic font-normal text-muted-foreground">Without Borders</em>
+          <span className={`font-display text-base md:text-lg font-semibold leading-tight transition-colors ${scrolled ? "text-primary" : "text-white"}`}>
+            Bodynamic <em className={`not-italic font-normal ${scrolled ? "text-muted-foreground" : "text-white/70"}`}>Without Borders</em>
           </span>
         </a>
 
@@ -43,7 +43,7 @@ export const Header = () => {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
+              className={`text-sm font-medium transition-colors ${scrolled ? "text-foreground/70 hover:text-primary" : "text-white/80 hover:text-white"}`}
             >
               {l.label}
             </a>
