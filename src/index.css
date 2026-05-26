@@ -58,22 +58,11 @@
   }
   h1, h2, h3, h4 {
     @apply font-display tracking-tight text-primary;
-    font-weight: 500;
-    line-height: 1.0;
-    font-optical-sizing: auto;
+    font-weight: 600;
+    line-height: 1.08;
   }
-  h1 { letter-spacing: -0.035em; line-height: 0.95; }
-  h2 { letter-spacing: -0.025em; }
+  h1 { letter-spacing: -0.025em; }
   ::selection { background: hsl(var(--accent) / 0.25); }
-}
-
-@layer utilities {
-  .section-y { @apply py-24 md:py-32; }
-  .hero-display {
-    font-size: clamp(2.75rem, 7vw, 6.25rem);
-    line-height: 0.95;
-    letter-spacing: -0.035em;
-  }
 }
 
 @layer components {

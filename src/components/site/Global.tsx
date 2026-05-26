@@ -9,7 +9,7 @@ const regions = [
 ];
 
 export const Global = () => (
-  <section id="global" className="py-24 md:py-32">
+  <section id="global" className="py-20 md:py-28">
     <div className="container-narrow">
       <div className="max-w-2xl reveal">
         <span className="eyebrow">Where we work</span>

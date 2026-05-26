@@ -25,7 +25,7 @@ const items = [
 ];
 
 export const Work = () => (
-  <section id="work" className="py-24 md:py-32 bg-muted/40">
+  <section id="work" className="py-20 md:py-28 bg-muted/40">
     <div className="container-narrow">
       <div className="max-w-2xl reveal">
         <span className="eyebrow">What we do</span>

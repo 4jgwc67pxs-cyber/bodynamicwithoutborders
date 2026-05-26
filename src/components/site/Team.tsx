@@ -16,7 +16,7 @@ const team = [
 ];
 
 export const Team = () => (
-  <section id="about" className="py-24 md:py-32">
+  <section id="about" className="py-20 md:py-28">
     <div className="container-narrow">
       <div className="max-w-3xl reveal">
         <span className="eyebrow">The team</span>
