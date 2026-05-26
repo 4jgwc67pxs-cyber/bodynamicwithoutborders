@@ -1,38 +1,43 @@
-# Plan: Betalingssystem for donationer
 
-## Hvad vi bygger
-Rigtige kort-betalinger på din eksisterende donation-sektion — både engangsdonation og månedlig støtte, i EUR (€).
+## Goal
+Match the charity:water reference: a full-bleed hero photo with the headline on the left and the donate card floating directly on top of the image on the right — no framed/rounded container, no separate donate section below the fold for the primary CTA.
 
-## Stak
-- **Lovable Cloud** — backend (gratis at slå til, $25 fri månedlig saldo)
-- **Stripe (built-in)** — ingen Stripe-konto nødvendig for at starte. Du kan teste med det samme; for at modtage rigtige penge skal du senere "claime" kontoen
-- Stripe håndterer kvitteringer, sikkerhed og PCI-compliance
+## Changes
 
-## Trin
+### 1. `src/components/site/Hero.tsx` — full redesign
+- Remove the rounded-3xl framed container and the `aspect-[21/9]` constraint on desktop.
+- New structure on desktop (md+):
+  - Full-bleed section: `relative w-full h-[88vh] min-h-[640px]` with the hero image as `absolute inset-0 object-cover`.
+  - Soft left-side gradient overlay (dark → transparent) so the white headline reads against the photo, image stays clean on the right.
+  - Content grid inside `container-narrow`, two columns:
+    - **Left:** eyebrow chip, serif/display H1 ("When the crisis remains in the body."), short subline. No CTA buttons here — the donate card replaces them.
+    - **Right:** the donate card, lifted onto the hero (white card, rounded-2xl, shadow-elegant). Width ~420px, vertically centered.
+- Mobile keeps the existing full-bleed mobile layout, but the donate card stacks below the headline inside the hero (or immediately after) instead of CTA buttons.
 
-1. **Slå Lovable Cloud til** — opretter backend automatisk
-2. **Kør provider-tjek** (`recommend_payment_provider`) — bekræfter Stripe passer til NGO/donationer
-3. **Aktiver Stripe payments** — opretter test-miljø straks
-4. **Beslut skat-håndtering** — for en NGO der modtager donationer anbefaler jeg "ingen automatisk skat" (option 3), siden donationer typisk ikke er momspligtige. Du bekræfter inden vi går videre
-5. **Opret 2 produkter i Stripe:**
-   - "One-time donation" (engangsbeløb, EUR)
-   - "Monthly donation" (recurring månedlig, EUR)
-   Begge med variabelt beløb så donor selv vælger
-6. **Opdater `Donate.tsx`:**
-   - Skift $ til €
-   - Knappen "Donate" kalder en edge function der opretter Stripe Checkout session
-   - Donor sendes til Stripe's sikre betalingsside
-7. **Lav 2 edge functions:**
-   - `create-donation-checkout` — opretter Stripe session med valgt beløb/frekvens
-   - `verify-donation` — verificerer betaling efter retur
-8. **Lav success/cancel sider:**
-   - `/donation-success` — "Tak for din støtte!"
-   - `/donation-cancelled` — "Donation annulleret"
+### 2. New `src/components/site/HeroDonateCard.tsx`
+- Extract the donate UI from `Donate.tsx` into a reusable card component used by the hero.
+- Same logic (frequency toggle, 4 amount tiles, custom input, impact line, CTA button) but visually tightened to match the reference:
+  - Compact header "Choose an amount to give" (small uppercase label).
+  - Monthly / One-time pill toggle at top, accent-yellow active state.
+  - 2×2 (or 3+1) amount grid showing "€10 / month" style labels.
+  - "Other amount" tile instead of separate input row (input appears when selected).
+  - Heart + impact line below.
+  - Full-width primary CTA "Join today" / "Donate €X".
+- Currency: € (per prior review feedback, European NGO).
 
-## Hvad du skal gøre bagefter
-- **Test** med Stripe's test-kort (4242 4242 4242 4242)
-- Når alt virker: **Claim Stripe-kontoen** (5 min, kræver bank-info) for at modtage rigtige penge
-- Stripe gebyrer: ~1.4% + 1.80 kr per EU-kort transaktion
+### 3. `src/components/site/Donate.tsx`
+- Reuse the new `HeroDonateCard` so the bottom donate section stays in sync. Keep the surrounding navy pitch panel; swap the inline card markup for `<HeroDonateCard />`.
 
-## Bemærk
-Vi skifter valuta fra USD ($) til EUR (€) i hele donation-UI'en for konsistens.
+### 4. `src/pages/Index.tsx`
+- No structural change. Hero now carries the primary donate CTA above the fold; the existing `<Donate />` section remains as a deeper, fuller pitch lower on the page.
+
+## Visual reference mapping
+- Charity:water hero photo full-bleed → our hero image becomes full-bleed (no rounded frame).
+- Their headline left, donate card right → same two-column layout.
+- Their yellow accent CTA → our existing `--accent` token (navy-trust palette's accent), no color changes.
+- Their serif headline → we already use a display serif via the chosen type pair; no font swap.
+
+## Out of scope
+- No copy rewrites beyond $ → €.
+- No changes to Stats, Method, Ukraine, Work, Team, Story, Global, Footer.
+- No new images (uses existing `src/assets/hero.jpg`).
