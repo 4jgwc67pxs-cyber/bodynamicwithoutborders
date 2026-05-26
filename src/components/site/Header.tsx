@@ -72,7 +72,7 @@ export const Header = () => {
             <a
               href="#donate"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center bg-accent text-accent-foreground px-5 py-3 rounded-full font-semibold"
+              className="mt-2 inline-flex items-center justify-center bg-accent text-accent-foreground px-5 py-3 rounded-sm font-semibold"
             >
               Donate →
             </a>
