@@ -4,10 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/logo.jpg";
 
 const links = [
-  { href: "#home", label: "Home" },
-  { href: "#ukraine", label: "Ukraine" },
-  { href: "#work", label: "What we do" },
-  { href: "#impact", label: "Impact" },
+  { href: "#work", label: "Our work" },
   { href: "/stories", label: "Stories" },
   { href: "#about", label: "About" },
 ];
@@ -41,7 +38,7 @@ export const Header = () => {
           </span>
         </a>
 
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-8">
           {links.map((l) => (
             <a
               key={l.href}
@@ -61,8 +58,9 @@ export const Header = () => {
             Donate
           </a>
           <button
-            className="lg:hidden p-2 text-primary"
-            aria-label="Menu"
+            className="md:hidden p-2 text-primary"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
             onClick={() => setOpen((o) => !o)}
           >
             {open ? <X size={22} /> : <Menu size={22} />}
@@ -71,7 +69,7 @@ export const Header = () => {
       </div>
 
       {open && (
-        <nav className="lg:hidden bg-background border-t border-border animate-fade-up">
+        <nav className="md:hidden bg-background border-t border-border animate-fade-up">
           <div className="container-narrow py-6 flex flex-col gap-4">
             {links.map((l) => (
               <a
