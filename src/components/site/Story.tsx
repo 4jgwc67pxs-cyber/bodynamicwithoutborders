@@ -50,14 +50,14 @@ export const Story = () => (
       <article className="reveal mt-14 grid lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
         {/* Portrait */}
         <div className="lg:col-span-5 relative">
-          <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10">
+          <div className="relative aspect-[4/5] rounded-sm overflow-hidden border border-white/10">
             <img
               src={story.img}
               alt={story.name}
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent" />
-            <span className="absolute top-5 left-5 bg-accent text-accent-foreground text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+            <span className="absolute top-5 left-5 bg-accent text-accent-foreground text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-sm">
               {story.tag}
             </span>
             <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -81,7 +81,7 @@ export const Story = () => (
                 </p>
               ))}
             </div>
-            <div className="mt-8 px-5 py-4 rounded-xl bg-accent/10 border-l-2 border-accent">
+            <div className="mt-8 px-5 py-4 rounded-sm bg-accent/10 border-l-2 border-accent">
               <div className="text-[10px] font-bold uppercase tracking-wider text-accent mb-1">
                 Outcome
               </div>

@@ -34,7 +34,7 @@ export const Team = () => (
             className="reveal group"
             style={{ transitionDelay: `${i * 80}ms` }}
           >
-            <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-muted shadow-card">
+            <div className="aspect-[4/5] rounded-sm overflow-hidden bg-muted shadow-card">
               <img
                 src={m.img}
                 alt={m.name}
