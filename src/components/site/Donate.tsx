@@ -11,7 +11,7 @@ export const Donate = () => {
   return (
     <section id="donate" className="py-20 md:py-28">
       <div className="container-narrow">
-        <div className="reveal rounded-3xl bg-gradient-navy text-primary-foreground overflow-hidden shadow-elegant">
+        <div className="reveal rounded-md bg-gradient-navy text-primary-foreground overflow-hidden shadow-elegant">
           <div className="grid lg:grid-cols-5 gap-10 p-8 md:p-12 lg:p-16">
             {/* Left — pitch */}
             <div className="lg:col-span-2">
