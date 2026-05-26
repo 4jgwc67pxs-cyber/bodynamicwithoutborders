@@ -18,11 +18,19 @@ export const Header = () => {
   return (
     <header className="sticky top-0 inset-x-0 z-50 bg-background border-b border-border">
       <div className="container-narrow flex items-center justify-between h-16 md:h-20">
-        <a href="#home" className="flex items-center gap-3 group">
+        <button
+          className="lg:hidden p-2 -ml-2 text-primary"
+          aria-label="Menu"
+          onClick={() => setOpen((o) => !o)}
+        >
+          {open ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
+        <a href="#home" className="flex items-center gap-3 group lg:mr-auto absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0">
           <span className="w-9 h-9 md:w-10 md:h-10 rounded-md overflow-hidden bg-primary shrink-0">
             <img src={logo} alt="Bodynamic Without Borders" className="w-full h-full object-cover" />
           </span>
-          <span className="font-display text-base md:text-lg font-semibold text-primary leading-tight">
+          <span className="hidden sm:inline font-display text-base md:text-lg font-semibold text-primary leading-tight">
             Bodynamic <em className="not-italic font-normal text-muted-foreground">Without Borders</em>
           </span>
         </a>
@@ -42,17 +50,10 @@ export const Header = () => {
         <div className="flex items-center gap-2">
           <a
             href="#donate"
-            className="hidden sm:inline-flex items-center gap-2 bg-accent hover:bg-[hsl(var(--accent-hover))] text-accent-foreground px-5 py-2.5 rounded-sm text-sm font-semibold transition-all shadow-soft hover:shadow-elegant hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 bg-accent hover:bg-[hsl(var(--accent-hover))] text-accent-foreground px-4 py-2 md:px-5 md:py-2.5 rounded-sm text-sm font-semibold transition-all shadow-soft hover:shadow-elegant hover:-translate-y-0.5"
           >
             Donate
           </a>
-          <button
-            className="lg:hidden p-2 text-primary"
-            aria-label="Menu"
-            onClick={() => setOpen((o) => !o)}
-          >
-            {open ? <X size={22} /> : <Menu size={22} />}
-          </button>
         </div>
       </div>
 
