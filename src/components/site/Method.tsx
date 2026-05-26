@@ -38,10 +38,10 @@ export const Method = () => (
         {pillars.map(({ icon: Icon, eyebrow, title, body }) => (
           <article
             key={eyebrow}
-            className="reveal group relative bg-card rounded-2xl p-7 md:p-8 shadow-card border border-border/60 transition-all hover:shadow-elegant hover:-translate-y-1 hover:border-accent/40"
+            className="reveal group relative bg-card rounded-sm p-7 md:p-8 border border-border transition-colors hover:border-accent/40"
           >
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-accent/10 text-accent mb-6 transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
-              <Icon size={22} strokeWidth={1.75} />
+            <div className="inline-flex items-center justify-center w-10 h-10 rounded-sm bg-accent/10 text-accent mb-6">
+              <Icon size={20} strokeWidth={1.75} />
             </div>
             <div className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
               {eyebrow}
