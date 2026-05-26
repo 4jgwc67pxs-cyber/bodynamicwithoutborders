@@ -4,64 +4,24 @@ import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { useReveal } from "@/hooks/useReveal";
-import taras from "@/assets/taras.jpg";
-import oleh from "@/assets/oleh.jpg";
-import volodymyr from "@/assets/volodymyr.jpg";
-import igor from "@/assets/igor.jpg";
-import ukraine from "@/assets/ukraine.jpg";
-import hero from "@/assets/hero.jpg";
+import kateryna from "@/assets/kateryna.jpg";
 
-const stories = [
-  {
-    img: taras,
-    tag: "Veterans program",
-    name: "Taras",
-    role: "Wounded combat veteran, Ukraine",
-    quote: "Suddenly you want the future to come — to plan, to live more than one day.",
-    body: "Wounded on the front in 2014, Taras came home but couldn't find his way back. Over five months in Ditte Marcher's Equal to Equal training, body-based trauma work helped him rebuild a relationship, enroll in university, and re-enter civilian life with presence instead of reaction.",
-    featured: true,
-  },
-  {
-    img: ukraine,
-    tag: "Veterans program",
-    name: "Olena",
-    role: "Veteran's wife, Lviv",
-    quote: "I learned my body was holding the war too. Once I felt that, I could finally rest.",
-    body: "Olena joined a partner program for veteran families after her husband returned from the front. Through body-based work, she found a way to support him without losing herself in the process.",
-  },
-  {
-    img: volodymyr,
-    tag: "Clinician training",
-    name: "Volodymyr",
-    role: "Psychotherapist & supervisor",
-    quote: "We're not flying in to fix a country — we're training the people who already are.",
-    body: "Volodymyr now leads mobile crisis teams in eastern Ukraine. Trained as a Bodynamic specialist, he supervises a growing network of local psychotherapists working in displacement settings.",
-  },
-  {
-    img: oleh,
-    tag: "Military psychiatry",
-    name: "Oleh, MD",
-    role: "Chief of Combat Stress Control, AFU",
-    quote: "What we built in Ukraine is now being asked for in conflicts elsewhere.",
-    body: "As Chief of Combat Stress Control in the Armed Forces of Ukraine, Oleh integrates body-based trauma protocols into frontline mental health care — and shares the model with NATO partners.",
-  },
-  {
-    img: hero,
-    tag: "Displacement response",
-    name: "A shelter in Kharkiv",
-    role: "Community recovery program",
-    quote: "The children stopped flinching at every loud sound. That was the first sign.",
-    body: "In the first weeks after evacuation, a partner team ran daily body-based stabilization sessions for displaced families. Within a month, sleep returned and children began to play again.",
-  },
-  {
-    img: igor,
-    tag: "Frontline medicine",
-    name: "Igor",
-    role: "Former CASEVAC commander",
-    quote: "Bandages stop the bleeding. Trauma work is what brings them back to life.",
-    body: "After commanding a CASEVAC unit, Igor retrained as a clinical psychologist and EMDR therapist. He now co-facilitates trauma programs for the same veterans he once evacuated.",
-  },
-];
+const featured = {
+  img: kateryna,
+  tag: "Volunteer recovery",
+  name: "Kateryna Podzizey",
+  role: "Combat medic & volunteer, Ukraine",
+  quote:
+    "The war changed me. It is not good and not bad. It is just a fact — now I need to accept this new me.",
+  paragraphs: [
+    "It started on Maidan in 2013 — on her 21st birthday. By March, Kateryna knew her life had split into a before and an after. When the war began, going to the front was not a question. Her younger brother, barely 18, went first. She and her chosen sister finished tactical medicine training and followed.",
+    "Then came the contrasts: bombardment at night, coffee and laughter by day. Driving the wounded to Mariupol in the dark, jumping rope in combat boots between shifts. Learning to tell their fire from the enemy's. Carrying the coffin of a friend she had known since Maidan — and the next morning, eating grilled chicken in the same ambulance.",
+    "She came home to exams, a diploma, a new job, a new love. And the slow, frightening realisation that the woman who came back was not the woman who left. \"I started to think that some things were normal that are not normal and cannot be normal.\"",
+    "At the Equal to Equal training she could not answer a simple question: who am I now? Across four modules and eight months of body-based work, she found ground beneath that question. Today she meets people without hostility, accepts that they can disagree, and moves through her life with intention instead of chaos.",
+    "\"After the war\" has not begun yet, she says — not while her unit is still burying six people a month. \"But I am alive.\"",
+  ],
+  outcome: "From chaotic survival to goal-oriented recovery.",
+};
 
 const Stories = () => {
   useReveal();
@@ -77,8 +37,6 @@ const Stories = () => {
     );
     if (!meta.parentNode) document.head.appendChild(meta);
   }, []);
-
-  const [featured, ...rest] = stories;
 
   return (
     <div className="min-h-screen bg-background">
@@ -118,48 +76,34 @@ const Stories = () => {
               </div>
               <Quote className="mt-6 text-accent" size={36} strokeWidth={1.5} />
               <blockquote className="mt-3 font-display text-2xl md:text-3xl leading-snug text-white italic">
-                {featured.quote}
+                "{featured.quote}"
               </blockquote>
               <div className="mt-6 text-sm">
                 <div className="font-semibold text-white">{featured.name}</div>
                 <div className="text-white/60">{featured.role}</div>
               </div>
-              <p className="mt-6 text-white/80 leading-relaxed">{featured.body}</p>
             </div>
           </article>
         </section>
 
-        {/* Story grid */}
+        {/* Full narrative */}
         <section className="container-narrow pb-20 md:pb-28">
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-            {rest.map((s, i) => (
-              <article
-                key={s.name + i}
-                className="reveal group bg-card border border-border rounded-2xl overflow-hidden shadow-card hover:shadow-elegant transition-all duration-500 ease-smooth hover:-translate-y-1"
-                style={{ transitionDelay: `${i * 60}ms` }}
-              >
-                <div className="aspect-[16/10] overflow-hidden">
-                  <img
-                    src={s.img}
-                    alt={s.name}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-smooth group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-6 md:p-8">
-                  <div className="text-xs font-semibold uppercase tracking-wider text-accent">
-                    {s.tag}
-                  </div>
-                  <blockquote className="mt-3 font-display text-lg md:text-xl text-primary leading-snug">
-                    "{s.quote}"
-                  </blockquote>
-                  <div className="mt-4 text-sm">
-                    <div className="font-semibold text-primary">{s.name}</div>
-                    <div className="text-muted-foreground">{s.role}</div>
-                  </div>
-                  <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{s.body}</p>
-                </div>
-              </article>
-            ))}
+          <div className="reveal max-w-2xl mx-auto">
+            <div className="eyebrow">In her own words</div>
+            <div className="mt-6 space-y-6 text-base md:text-lg text-foreground/85 leading-relaxed font-serif">
+              {featured.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+            <div className="mt-10 px-6 py-5 rounded-xl bg-accent/10 border-l-2 border-accent">
+              <div className="text-[10px] font-bold uppercase tracking-wider text-accent mb-1">
+                Outcome
+              </div>
+              <div className="text-sm text-foreground/90">{featured.outcome}</div>
+            </div>
+            <p className="mt-10 text-sm text-muted-foreground italic">
+              More stories from the field will be added as participants share them.
+            </p>
           </div>
         </section>
 
