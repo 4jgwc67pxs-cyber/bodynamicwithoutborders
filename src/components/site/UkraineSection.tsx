@@ -1,5 +1,5 @@
 import ukraine from "@/assets/ukraine.jpg";
-import { ArrowRight } from "lucide-react";
+
 
 export const UkraineSection = () => (
   <section id="ukraine" className="py-20 md:py-28">
