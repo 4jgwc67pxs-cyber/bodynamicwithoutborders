@@ -1,8 +1,13 @@
 import hero from "@/assets/hero.jpg";
 import { HeroDonateCard } from "./HeroDonateCard";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { X } from "lucide-react";
 
-export const Hero = () => (
+export const Hero = () => {
+  const [donateOpen, setDonateOpen] = useState(false);
+
+  return (
   <section id="home" className="relative overflow-hidden">
     {/* Mobile: full-bleed, full-screen hero */}
     <div className="relative h-[100svh] w-full md:hidden">
@@ -24,12 +29,34 @@ export const Hero = () => (
             Trauma-informed humanitarian response in conflict-affected regions.
           </p>
           <div className="mt-10">
-            <Button asChild size="lg" className="rounded-sm px-10 py-6 text-base font-semibold tracking-wide">
-              <a href="#donate">Donate</a>
+            <Button
+              size="lg"
+              onClick={() => setDonateOpen(true)}
+              className="rounded-sm px-10 py-6 text-base font-semibold tracking-wide"
+            >
+              Donate
             </Button>
           </div>
         </div>
       </div>
+
+      {/* Mobile donate overlay */}
+      {donateOpen && (
+        <div className="fixed inset-0 z-[100] bg-background md:hidden animate-fade-up overflow-y-auto">
+          <div className="flex justify-end p-4 safe-area-top">
+            <button
+              onClick={() => setDonateOpen(false)}
+              aria-label="Close"
+              className="p-2 text-foreground hover:opacity-70 transition-opacity"
+            >
+              <X size={28} />
+            </button>
+          </div>
+          <div className="px-5 pb-12 flex justify-center">
+            <HeroDonateCard variant="light" />
+          </div>
+        </div>
+      )}
     </div>
 
     {/* Desktop: full-bleed hero with overlaid donate card */}
@@ -60,4 +87,5 @@ export const Hero = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
