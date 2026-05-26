@@ -18,6 +18,10 @@ export const Footer = () => (
           <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-xs">
             Trauma-informed humanitarian response. Field-tested in Ukraine since 2006.
           </p>
+          <p className="mt-4 text-xs text-muted-foreground/80 leading-relaxed">
+            Registered non-profit, Denmark.<br />
+            CVR-no. pending publication.
+          </p>
         </div>
 
         <div>

@@ -2,7 +2,7 @@ import hero from "@/assets/hero.jpg";
 import { ArrowRight } from "lucide-react";
 
 export const Hero = () => (
-  <section id="home" className="relative overflow-hidden md:pt-28 md:pb-24">
+  <section id="home" className="relative overflow-hidden">
     {/* Mobile: full-bleed, full-screen hero */}
     <div className="relative h-[100svh] w-full md:hidden">
       <img
@@ -19,11 +19,11 @@ export const Hero = () => (
           <span className="inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.2em] text-accent-foreground bg-accent/90 px-3 py-1.5 rounded-full">
             Field-tested in Ukraine since 2006
           </span>
-          <h1 className="mt-5 text-[2.5rem] leading-[1.05] font-display font-semibold text-white tracking-tight">
-            When the crisis<br />remains in the body.
+          <h1 className="mt-5 text-[3.25rem] leading-[0.92] font-display text-white uppercase">
+            When crisis stays<br />in the body,<br />we go there.
           </h1>
-          <p className="mt-4 text-base text-white/85 max-w-xl">
-            Trauma-informed humanitarian response in conflict-affected and post-crisis regions.
+          <p className="mt-5 text-base text-white/85 max-w-xl leading-relaxed">
+            Body-oriented trauma care for people living through war, displacement and disaster — built with local clinicians, in the field.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <a
@@ -43,40 +43,38 @@ export const Hero = () => (
       </div>
     </div>
 
-    {/* Desktop: original framed hero */}
-    <div className="hidden md:block container-narrow">
-      <div className="relative rounded-3xl overflow-hidden shadow-elegant">
-        <div className="relative aspect-[21/9] w-full">
-          <img
-            src={hero}
-            alt="Trauma-informed humanitarian response"
-            className="absolute inset-0 w-full h-full object-cover animate-ken-burns"
-          />
-          <div className="absolute inset-0 bg-gradient-hero-overlay" />
-          <div className="absolute inset-0 bg-primary/20" />
-        </div>
+    {/* Desktop: full-bleed hero */}
+    <div className="relative hidden md:block w-full h-[92vh] min-h-[640px]">
+      <img
+        src={hero}
+        alt="Trauma-informed humanitarian response"
+        className="absolute inset-0 w-full h-full object-cover animate-ken-burns"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-primary/10 to-primary/85" />
+      <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-primary via-primary/60 to-transparent" />
 
-        <div className="absolute inset-0 flex flex-col justify-end p-12 lg:p-16">
-          <div className="max-w-3xl animate-fade-up">
-            <span className="inline-flex items-center gap-2 text-xs md:text-sm font-medium uppercase tracking-[0.2em] text-accent-foreground bg-accent/90 px-3 py-1.5 rounded-full">
+      <div className="absolute inset-0 flex flex-col justify-end pb-20 lg:pb-28">
+        <div className="container-narrow">
+          <div className="max-w-4xl animate-fade-up">
+            <span className="inline-flex items-center gap-2 text-xs md:text-sm font-medium uppercase tracking-[0.22em] text-accent-foreground bg-accent/90 px-3 py-1.5 rounded-full">
               Field-tested in Ukraine since 2006
             </span>
-            <h1 className="mt-5 text-4xl md:text-6xl lg:text-7xl font-display font-semibold text-white leading-[1.05] tracking-tight">
-              When the crisis<br />remains in the body.
+            <h1 className="mt-6 text-6xl md:text-7xl lg:text-[7.5rem] font-display text-white uppercase leading-[0.9]">
+              When crisis stays in the body,<br />we go there.
             </h1>
-            <p className="mt-5 md:mt-6 text-base md:text-lg text-white/85 max-w-xl">
-              Trauma-informed humanitarian response in conflict-affected and post-crisis regions.
+            <p className="mt-6 text-base md:text-lg text-white/85 max-w-2xl leading-relaxed">
+              Body-oriented trauma care for people living through war, displacement and disaster — built with local clinicians, in the field.
             </p>
-            <div className="mt-7 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="#donate"
-                className="inline-flex items-center gap-2 bg-accent hover:bg-[hsl(var(--accent-hover))] text-accent-foreground px-6 py-3.5 rounded-full font-semibold shadow-elegant transition-all hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 bg-accent hover:bg-[hsl(var(--accent-hover))] text-accent-foreground px-7 py-4 rounded-full font-semibold shadow-elegant transition-all hover:-translate-y-0.5"
               >
                 Donate now <ArrowRight size={18} />
               </a>
               <a
                 href="#work"
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/30 px-6 py-3.5 rounded-full font-semibold transition-all"
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/30 px-7 py-4 rounded-full font-semibold transition-all"
               >
                 See our work
               </a>
