@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
+import { TrustBar } from "@/components/site/TrustBar";
 import { Stats } from "@/components/site/Stats";
 import { Method } from "@/components/site/Method";
 import { UkraineSection } from "@/components/site/UkraineSection";
@@ -9,6 +10,8 @@ import { Team } from "@/components/site/Team";
 import { Story } from "@/components/site/Story";
 import { Global } from "@/components/site/Global";
 import { Donate } from "@/components/site/Donate";
+import { WhereMoneyGoes } from "@/components/site/WhereMoneyGoes";
+import { WaysToHelp } from "@/components/site/WaysToHelp";
 import { MidDonateBanner } from "@/components/site/MidDonateBanner";
 import { Footer } from "@/components/site/Footer";
 import { useReveal } from "@/hooks/useReveal";
@@ -31,6 +34,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <TrustBar />
         <Stats />
         <Method />
         <UkraineSection />
@@ -39,6 +43,8 @@ const Index = () => {
         <Team />
         <Story />
         <Global />
+        <WaysToHelp />
+        <WhereMoneyGoes />
         <Donate />
       </main>
       <Footer />
