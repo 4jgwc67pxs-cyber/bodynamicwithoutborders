@@ -42,7 +42,7 @@ export const Header = () => {
         <div className="flex items-center gap-2">
           <a
             href="#donate"
-            className="hidden sm:inline-flex items-center gap-2 bg-accent hover:bg-[hsl(var(--accent-hover))] text-accent-foreground px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-soft hover:shadow-elegant hover:-translate-y-0.5"
+            className="hidden sm:inline-flex items-center gap-2 bg-accent hover:bg-[hsl(var(--accent-hover))] text-accent-foreground px-5 py-2.5 rounded-sm text-sm font-semibold transition-all shadow-soft hover:shadow-elegant hover:-translate-y-0.5"
           >
             Donate
           </a>
