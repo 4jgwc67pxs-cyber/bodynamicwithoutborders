@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/logo.jpg";
 
 const links = [
-  { href: "#work", label: "Our work" },
+  { href: "#home", label: "Home" },
+  { href: "#ukraine", label: "Ukraine" },
+  { href: "#work", label: "What we do" },
+  { href: "#impact", label: "Impact" },
   { href: "/stories", label: "Stories" },
   { href: "#about", label: "About" },
 ];
@@ -33,17 +36,17 @@ export const Header = () => {
           <span className="w-9 h-9 md:w-10 md:h-10 rounded-md overflow-hidden bg-primary shrink-0">
             <img src={logo} alt="Bodynamic Without Borders" className="w-full h-full object-cover" />
           </span>
-          <span className={`font-display text-base md:text-lg font-semibold leading-tight transition-colors ${scrolled ? "text-primary" : "text-white"}`}>
-            Bodynamic <em className={`not-italic font-normal ${scrolled ? "text-muted-foreground" : "text-white/70"}`}>Without Borders</em>
+          <span className="font-display text-base md:text-lg font-semibold text-primary leading-tight">
+            Bodynamic <em className="not-italic font-normal text-muted-foreground">Without Borders</em>
           </span>
         </a>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-8">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className={`text-sm font-medium transition-colors ${scrolled ? "text-foreground/70 hover:text-primary" : "text-white/80 hover:text-white"}`}
+              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
             >
               {l.label}
             </a>
@@ -58,9 +61,8 @@ export const Header = () => {
             Donate
           </a>
           <button
-            className="md:hidden p-2 text-primary"
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
+            className="lg:hidden p-2 text-primary"
+            aria-label="Menu"
             onClick={() => setOpen((o) => !o)}
           >
             {open ? <X size={22} /> : <Menu size={22} />}
@@ -69,7 +71,7 @@ export const Header = () => {
       </div>
 
       {open && (
-        <nav className="md:hidden bg-background border-t border-border animate-fade-up">
+        <nav className="lg:hidden bg-background border-t border-border animate-fade-up">
           <div className="container-narrow py-6 flex flex-col gap-4">
             {links.map((l) => (
               <a
