@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+
 
 const items = [
   {
@@ -6,21 +6,18 @@ const items = [
     step: "Arrive",
     title: "On the ground in the first weeks",
     body: "Body-based trauma sessions in shelters, displacement settings, and overstretched local services where formal care cannot yet meet the need.",
-    cta: "See our field response",
   },
   {
     num: "02",
     step: "Train",
     title: "Local hands, permanent care",
     body: "Local clinicians, teachers, and first responders learn the same methods so trauma support remains in place long after the emergency phase.",
-    cta: "Training programs",
   },
   {
     num: "03",
     step: "Stay",
     title: "Long after the headlines",
     body: "Crisis leaves the headlines long before it leaves the body. Our partnerships are built for the slow work of reintegration and resilience.",
-    cta: "Long-term partnerships",
   },
 ];
 
@@ -50,9 +47,6 @@ export const Work = () => (
             </div>
             <h3 className="mt-5 text-xl md:text-2xl">{it.title}</h3>
             <p className="mt-4 text-muted-foreground leading-relaxed">{it.body}</p>
-            <a href="#" className="link-arrow mt-6 text-sm">
-              {it.cta} <ArrowRight size={14} />
-            </a>
           </article>
         ))}
       </div>

@@ -1,5 +1,5 @@
 import ukraine from "@/assets/ukraine.jpg";
-import { ArrowRight } from "lucide-react";
+
 
 export const UkraineSection = () => (
   <section id="ukraine" className="py-20 md:py-28">
@@ -35,9 +35,6 @@ export const UkraineSection = () => (
           <p className="mt-3 text-sm text-muted-foreground">
             Documented in a Ukrainian veteran cohort, across treatment and follow-up.
           </p>
-          <a href="#" className="link-arrow mt-5">
-            Read the full Ukraine case <ArrowRight size={16} />
-          </a>
         </div>
       </div>
     </div>

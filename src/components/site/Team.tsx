@@ -2,7 +2,7 @@ import oleh from "@/assets/oleh.jpg";
 import volodymyr from "@/assets/volodymyr.jpg";
 import taras from "@/assets/taras.jpg";
 import igor from "@/assets/igor.jpg";
-import { ArrowRight } from "lucide-react";
+
 
 const team = [
   { img: oleh, name: "Oleh Hukovskyy, MD", title: "Psychiatry & combat stress",
@@ -50,9 +50,6 @@ export const Team = () => (
         ))}
       </div>
 
-      <a href="#" className="link-arrow mt-12 inline-flex">
-        Meet the full team <ArrowRight size={16} />
-      </a>
     </div>
   </section>
 );
