@@ -44,9 +44,9 @@ export const Global = () => (
           </ul>
         </div>
         <div className="reveal">
-          <div className="relative rounded-2xl overflow-hidden shadow-elegant">
+          <div className="relative rounded-sm overflow-hidden shadow-elegant">
             <img src={apa} alt="APA Society for Military Psychology" className="w-full aspect-[4/5] object-cover" />
-            <div className="absolute top-4 left-4 bg-background/90 backdrop-blur px-3 py-1 rounded-full text-xs font-medium text-primary">
+            <div className="absolute top-4 left-4 bg-background/90 backdrop-blur px-3 py-1 rounded-sm text-xs font-medium text-primary">
               Partners
             </div>
             <div className="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-primary/90 to-transparent text-white text-sm">

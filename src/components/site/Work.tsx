@@ -40,7 +40,7 @@ export const Work = () => (
         {items.map((it, i) => (
           <article
             key={it.num}
-            className="reveal group bg-card rounded-2xl p-7 md:p-8 border border-border shadow-card transition-all duration-500 ease-smooth hover:-translate-y-1 hover:shadow-elegant"
+            className="reveal group bg-card rounded-sm p-7 md:p-8 border border-border shadow-card transition-all duration-500 ease-smooth hover:-translate-y-1 hover:shadow-elegant"
             style={{ transitionDelay: `${i * 100}ms` }}
           >
             <div className="flex items-baseline gap-3 text-xs font-mono font-semibold tracking-wider text-accent">
