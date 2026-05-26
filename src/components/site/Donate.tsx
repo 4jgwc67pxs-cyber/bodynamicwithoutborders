@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ArrowRight, Check, Heart } from "lucide-react";
 
-const amounts = [10, 25, 50, 100];
+const amounts = [100, 250, 500, 1000];
 
 const points = [
   "Rapid crisis support in conflict-affected communities",
@@ -18,10 +18,10 @@ export const Donate = () => {
 
   const impactLine = (() => {
     if (!finalAmount || finalAmount < 1) return "Every contribution matters.";
-    if (finalAmount < 25) return "Helps cover materials for a trauma session.";
-    if (finalAmount < 50) return "Supports a community recovery session.";
-    if (finalAmount < 100) return "Contributes to training a local clinician.";
-    return "Helps fund a full day of field response.";
+    if (finalAmount < 150) return "Funds one trauma session in the field.";
+    if (finalAmount < 400) return "Supports a week of community recovery work.";
+    if (finalAmount < 800) return "Trains a local clinician in trauma response.";
+    return "Sponsors a full crisis-response deployment day.";
   })();
 
   return (
@@ -86,8 +86,8 @@ export const Donate = () => {
                             : "border-border text-foreground hover:border-primary/40"
                         }`}
                       >
-                        €{a}
-                        {a === 25 && !custom && (
+                        ${a}
+                        {a === 250 && !custom && (
                           <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground text-[9px] leading-none font-bold uppercase tracking-wider px-2 py-1 rounded-full shadow-soft whitespace-nowrap">
                             Popular
                           </span>
@@ -100,7 +100,7 @@ export const Donate = () => {
                 {/* Custom amount */}
                 <div className="mt-4 relative">
                   <span className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground font-medium">
-                    €
+                    $
                   </span>
                   <input
                     type="number"
@@ -117,7 +117,7 @@ export const Donate = () => {
                   <Heart size={18} className="text-accent shrink-0 mt-0.5" />
                   <p className="text-muted-foreground">
                     <span className="font-semibold text-primary">
-                      €{finalAmount || 0}
+                      ${finalAmount || 0}
                       {frequency === "monthly" ? "/mo" : ""}
                     </span>{" "}
                     — {impactLine}
@@ -126,13 +126,13 @@ export const Donate = () => {
 
                 {/* CTA */}
                 <button className="mt-6 w-full inline-flex items-center justify-center gap-2 bg-accent hover:bg-[hsl(var(--accent-hover))] text-accent-foreground py-4 rounded-full font-semibold shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-elegant">
-                  Donate €{finalAmount || 0}
+                  Donate ${finalAmount || 0}
                   {frequency === "monthly" ? " / month" : ""}
                   <ArrowRight size={18} />
                 </button>
 
                 <p className="mt-4 text-xs text-muted-foreground text-center">
-                  Secure payment · Cancel anytime
+                  Secure payment · Tax-deductible · Cancel anytime
                 </p>
               </div>
             </div>

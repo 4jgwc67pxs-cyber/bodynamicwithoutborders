@@ -6,10 +6,10 @@ export const MidDonateBanner = () => (
       <div className="reveal flex flex-col md:flex-row md:items-center justify-between gap-6 p-8 md:p-10 rounded-2xl bg-card border border-border shadow-card">
         <div>
           <div className="text-xs font-semibold uppercase tracking-wider text-accent">
-            Become a monthly donor
+            $250 / month
           </div>
-          <h3 className="mt-2 text-2xl md:text-3xl text-primary">
-            Steady support keeps the work going between crises.
+          <h3 className="mt-2 text-xl md:text-2xl text-primary">
+            Trains a local clinician for a full week.
           </h3>
         </div>
         <a

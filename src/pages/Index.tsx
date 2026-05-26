@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
-import { MissionStrip } from "@/components/site/MissionStrip";
-import { Problem } from "@/components/site/Problem";
+import { Stats } from "@/components/site/Stats";
+import { Method } from "@/components/site/Method";
 import { UkraineSection } from "@/components/site/UkraineSection";
 import { Work } from "@/components/site/Work";
+import { Team } from "@/components/site/Team";
 import { Story } from "@/components/site/Story";
-import { WhereMoneyGoes } from "@/components/site/WhereMoneyGoes";
-import { Partners } from "@/components/site/Partners";
+import { Global } from "@/components/site/Global";
 import { Donate } from "@/components/site/Donate";
 import { MidDonateBanner } from "@/components/site/MidDonateBanner";
 import { Footer } from "@/components/site/Footer";
@@ -31,14 +31,14 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <MissionStrip />
-        <Problem />
-        <Work />
+        <Stats />
+        <Method />
         <UkraineSection />
-        <Story />
-        <WhereMoneyGoes />
+        <Work />
         <MidDonateBanner />
-        <Partners />
+        <Team />
+        <Story />
+        <Global />
         <Donate />
       </main>
       <Footer />
