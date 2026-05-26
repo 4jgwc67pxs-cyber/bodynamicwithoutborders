@@ -64,8 +64,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        display: ['Outfit', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        sans: ['Figtree', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['Fraunces', 'ui-serif', 'Georgia', 'serif'],
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-navy': 'var(--gradient-navy)',
