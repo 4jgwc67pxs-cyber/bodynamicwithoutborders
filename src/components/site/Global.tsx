@@ -28,7 +28,7 @@ export const Global = () => (
               return (
                 <li key={r.name} className="flex items-center gap-4 py-4">
                   <span
-                    className={`w-2 h-2 rounded-sm ${active ? "bg-accent" : "bg-muted-foreground/40"}`}
+                    className={`w-2 h-2 rounded-full ${active ? "bg-accent" : "bg-muted-foreground/40"}`}
                   />
                   <span className="flex-1 font-medium text-primary">{r.name}</span>
                   <span
