@@ -50,9 +50,6 @@ export const Team = () => (
         ))}
       </div>
 
-      <a href="#" className="link-arrow mt-12 inline-flex">
-        Meet the full team <ArrowRight size={16} />
-      </a>
     </div>
   </section>
 );

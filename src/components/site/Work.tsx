@@ -50,9 +50,6 @@ export const Work = () => (
             </div>
             <h3 className="mt-5 text-xl md:text-2xl">{it.title}</h3>
             <p className="mt-4 text-muted-foreground leading-relaxed">{it.body}</p>
-            <a href="#" className="link-arrow mt-6 text-sm">
-              {it.cta} <ArrowRight size={14} />
-            </a>
           </article>
         ))}
       </div>
