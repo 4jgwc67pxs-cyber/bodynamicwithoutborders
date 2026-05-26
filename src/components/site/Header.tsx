@@ -18,22 +18,24 @@ export const Header = () => {
   return (
     <header className="sticky top-0 inset-x-0 z-50 bg-background border-b border-border">
       <div className="container-narrow flex items-center justify-between h-20 md:h-20">
-        <button
-          className="lg:hidden p-2 -ml-2 text-primary"
-          aria-label="Menu"
-          onClick={() => setOpen((o) => !o)}
-        >
-          {open ? <X size={28} strokeWidth={2.25} /> : <Menu size={28} strokeWidth={2.25} />}
-        </button>
+        <div className="flex items-center gap-3">
+          <button
+            className="lg:hidden p-2 -ml-2 text-primary"
+            aria-label="Menu"
+            onClick={() => setOpen((o) => !o)}
+          >
+            {open ? <X size={28} strokeWidth={2.25} /> : <Menu size={28} strokeWidth={2.25} />}
+          </button>
 
-        <a href="#home" className="flex items-center gap-3 group lg:mr-auto absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0">
-          <span className="w-11 h-11 md:w-10 md:h-10 rounded-md overflow-hidden bg-primary shrink-0">
-            <img src={logo} alt="Bodynamic Without Borders" className="w-full h-full object-cover" />
-          </span>
-          <span className="hidden sm:inline font-display text-base md:text-lg font-semibold text-primary leading-tight">
-            Bodynamic <em className="not-italic font-normal text-muted-foreground">Without Borders</em>
-          </span>
-        </a>
+          <a href="#home" className="flex items-center gap-3 group">
+            <span className="w-11 h-11 md:w-10 md:h-10 rounded-md overflow-hidden bg-primary shrink-0">
+              <img src={logo} alt="Bodynamic Without Borders" className="w-full h-full object-cover" />
+            </span>
+            <span className="hidden sm:inline font-display text-base md:text-lg font-semibold text-primary leading-tight">
+              Bodynamic <em className="not-italic font-normal text-muted-foreground">Without Borders</em>
+            </span>
+          </a>
+        </div>
 
         <nav className="hidden lg:flex items-center gap-8">
           {links.map((l) => (
