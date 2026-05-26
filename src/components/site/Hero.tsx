@@ -1,5 +1,6 @@
 import hero from "@/assets/hero.jpg";
 import { HeroDonateCard } from "./HeroDonateCard";
+import { Button } from "@/components/ui/button";
 
 export const Hero = () => (
   <section id="home" className="relative overflow-hidden">
@@ -11,19 +12,21 @@ export const Hero = () => (
         className="absolute inset-0 w-full h-full object-cover animate-ken-burns"
       />
 
-      <div className="absolute inset-0 flex flex-col justify-end px-6 pb-14 pt-24 safe-area-bottom">
+      {/* Subtle gradient for legibility */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/60" />
+
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 safe-area-bottom">
         <div className="animate-fade-up">
-          <span className="inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.2em] text-white bg-white/15 backdrop-blur px-3 py-1.5 rounded-sm border border-white/20">
-            Field-tested in Ukraine since 2006
-          </span>
-          <h1 className="mt-5 text-[2.5rem] leading-[1.05] font-display font-semibold text-white tracking-tight">
+          <h1 className="text-[2.5rem] leading-[1.05] font-display font-semibold text-white tracking-tight">
             When the crisis<br />remains in the body.
           </h1>
-          <p className="mt-4 text-base text-white/85 max-w-xl">
-            Trauma-informed humanitarian response in conflict-affected and post-crisis regions.
+          <p className="mt-5 text-base text-white/90 max-w-sm mx-auto">
+            Trauma-informed humanitarian response in conflict-affected regions.
           </p>
-          <div className="mt-7">
-            <HeroDonateCard />
+          <div className="mt-10">
+            <Button asChild size="lg" className="rounded-sm px-10 py-6 text-base font-semibold tracking-wide">
+              <a href="#donate">Donate</a>
+            </Button>
           </div>
         </div>
       </div>
