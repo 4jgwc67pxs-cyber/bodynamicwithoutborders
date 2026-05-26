@@ -22,17 +22,17 @@ export const HeroDonateCard = ({ variant = "onImage" }: { variant?: Variant }) =
 
   return (
     <div
-      className={`w-full max-w-[440px] bg-white rounded-2xl p-6 md:p-7 text-foreground shadow-elegant ${
+      className={`w-full max-w-[440px] bg-white rounded-md p-6 md:p-7 text-foreground shadow-elegant ${
         variant === "onImage" ? "ring-1 ring-black/5" : ""
       }`}
     >
       {/* Frequency toggle */}
-      <div className="bg-muted p-1 rounded-full grid grid-cols-2 gap-1">
+      <div className="bg-muted p-1 rounded-sm grid grid-cols-2 gap-1">
         {(["monthly", "once"] as const).map((f) => (
           <button
             key={f}
             onClick={() => setFrequency(f)}
-            className={`py-2.5 rounded-full text-sm font-semibold transition-all ${
+            className={`py-2.5 rounded-sm text-sm font-semibold transition-all ${
               frequency === f
                 ? "bg-accent text-accent-foreground shadow-soft"
                 : "text-muted-foreground hover:text-primary"
@@ -58,9 +58,9 @@ export const HeroDonateCard = ({ variant = "onImage" }: { variant?: Variant }) =
                 setAmount(a);
                 setCustom("");
               }}
-              className={`py-3.5 rounded-xl border-2 font-display font-semibold text-base transition-all ${
+              className={`py-3.5 rounded-sm border font-display font-semibold text-base transition-all ${
                 active
-                  ? "border-accent bg-accent/10 text-primary"
+                  ? "border-accent bg-accent/10 text-primary ring-1 ring-accent"
                   : "border-border text-foreground hover:border-primary/40"
               }`}
             >
@@ -83,7 +83,7 @@ export const HeroDonateCard = ({ variant = "onImage" }: { variant?: Variant }) =
           placeholder="Other amount"
           value={custom}
           onChange={(e) => setCustom(e.target.value)}
-          className="w-full py-3 pl-8 pr-4 rounded-xl border-2 border-border bg-background focus:border-accent focus:outline-none transition-colors text-sm"
+          className="w-full py-3 pl-8 pr-4 rounded-sm border border-border bg-background focus:border-accent focus:outline-none transition-colors text-sm"
         />
       </div>
 
@@ -94,7 +94,7 @@ export const HeroDonateCard = ({ variant = "onImage" }: { variant?: Variant }) =
       </div>
 
       {/* CTA */}
-      <button className="mt-5 w-full inline-flex items-center justify-center gap-2 bg-accent hover:bg-[hsl(var(--accent-hover))] text-accent-foreground py-3.5 rounded-full font-semibold shadow-soft transition-all hover:-translate-y-0.5">
+      <button className="mt-5 w-full inline-flex items-center justify-center gap-2 bg-accent hover:bg-[hsl(var(--accent-hover))] text-accent-foreground py-3.5 rounded-sm font-semibold shadow-soft transition-all hover:-translate-y-0.5">
         {frequency === "monthly" ? "Join today" : `Donate €${finalAmount || 0}`}
         <ArrowRight size={18} />
       </button>
