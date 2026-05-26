@@ -5,9 +5,9 @@ export const UkraineSection = () => (
   <section id="ukraine" className="py-20 md:py-28">
     <div className="container-narrow grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
       <div className="reveal relative">
-        <div className="relative rounded-2xl overflow-hidden shadow-elegant">
+        <div className="relative rounded-sm overflow-hidden shadow-soft">
           <img src={ukraine} alt="Training session in Lviv" className="w-full aspect-[4/5] object-cover" />
-          <div className="absolute top-4 left-4 bg-background/90 backdrop-blur px-3 py-1 rounded-full text-xs font-medium text-primary">
+          <div className="absolute top-4 left-4 bg-background/95 backdrop-blur px-3 py-1 rounded-sm text-xs font-medium text-primary">
             Ukraine
           </div>
           <div className="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-primary/90 to-transparent text-white text-sm">
@@ -25,7 +25,7 @@ export const UkraineSection = () => (
           and the clinicians who care for them. The methods refined there now ground how we respond elsewhere.
         </p>
 
-        <div className="mt-8 p-6 md:p-8 bg-muted/60 border border-border rounded-2xl">
+        <div className="mt-8 p-6 md:p-8 bg-muted/60 border border-border rounded-sm">
           <div className="text-xs font-semibold uppercase tracking-wider text-accent">
             Sustained PTSD reduction
           </div>
