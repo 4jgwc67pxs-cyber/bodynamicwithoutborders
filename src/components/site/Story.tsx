@@ -23,7 +23,7 @@ const stats = [
 ];
 
 export const Story = () => (
-  <section id="stories" className="py-20 md:py-28 bg-primary text-primary-foreground relative overflow-hidden">
+  <section id="stories" className="py-24 md:py-32 bg-primary text-primary-foreground relative overflow-hidden">
     <div
       className="absolute inset-0 opacity-[0.04] pointer-events-none"
       style={{

@@ -6,7 +6,7 @@ const stats = [
 ];
 
 export const Stats = () => (
-  <section id="impact" className="py-16 md:py-24 bg-primary text-primary-foreground">
+  <section id="impact" className="py-24 md:py-32 bg-primary text-primary-foreground">
     <div className="container-narrow">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 md:gap-y-12 gap-x-8">
         {stats.map((s, i) => (

@@ -2,7 +2,7 @@ import ukraine from "@/assets/ukraine.jpg";
 import { ArrowRight } from "lucide-react";
 
 export const UkraineSection = () => (
-  <section id="ukraine" className="py-20 md:py-28">
+  <section id="ukraine" className="py-24 md:py-32">
     <div className="container-narrow grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
       <div className="reveal relative">
         <div className="relative rounded-sm overflow-hidden shadow-soft">
