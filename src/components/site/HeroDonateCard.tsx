@@ -112,10 +112,19 @@ export const HeroDonateCard = ({ variant = "onImage" }: { variant?: Variant }) =
       </div>
 
       {/* CTA */}
-      <button className="mt-5 w-full inline-flex items-center justify-center gap-2 bg-accent hover:bg-[hsl(var(--accent-hover))] text-accent-foreground py-3.5 rounded-sm font-semibold shadow-soft transition-all hover:-translate-y-0.5">
+      <a
+        href={`mailto:contact@bodynamicwithoutborders.org?subject=${encodeURIComponent(
+          `Donation pledge — €${finalAmount || 0} ${frequency === "monthly" ? "monthly" : "one-time"}`
+        )}&body=${encodeURIComponent(
+          `Hi Bodynamic Without Borders,%0D%0A%0D%0AI'd like to give €${finalAmount || 0} ${
+            frequency === "monthly" ? "every month" : "as a one-time gift"
+          }. Please send me payment instructions.%0D%0A%0D%0AThank you.`
+        )}`}
+        className="mt-5 w-full inline-flex items-center justify-center gap-2 bg-accent hover:bg-[hsl(var(--accent-hover))] text-accent-foreground py-3.5 rounded-sm font-semibold shadow-soft transition-all hover:-translate-y-0.5"
+      >
         {frequency === "monthly" ? "Join today" : `Donate €${finalAmount || 0}`}
         <ArrowRight size={18} />
-      </button>
+      </a>
 
       <p className="mt-3 text-[11px] text-muted-foreground text-center">
         Secure payment · Cancel anytime
