@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, MapPin, Users, Calendar, Award, Play } from "lucide-react";
+import { ArrowLeft, ArrowRight, MapPin, Users, Calendar, Award } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { useReveal } from "@/hooks/useReveal";
