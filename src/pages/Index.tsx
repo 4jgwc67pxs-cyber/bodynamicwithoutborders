@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
+import { TrustStrip } from "@/components/site/TrustStrip";
 import { Stats } from "@/components/site/Stats";
 import { Method } from "@/components/site/Method";
 import { UkraineSection } from "@/components/site/UkraineSection";
@@ -8,6 +9,7 @@ import { Work } from "@/components/site/Work";
 import { Team } from "@/components/site/Team";
 import { Story } from "@/components/site/Story";
 import { Global } from "@/components/site/Global";
+import { Transparency } from "@/components/site/Transparency";
 import { Donate } from "@/components/site/Donate";
 import { Footer } from "@/components/site/Footer";
 import { useReveal } from "@/hooks/useReveal";
@@ -30,10 +32,12 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <TrustStrip />
         <Stats />
         <Method />
         <UkraineSection />
         <Work />
+        <Transparency />
         <Team />
         <Story />
         <Global />
