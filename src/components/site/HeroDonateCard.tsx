@@ -2,10 +2,10 @@ import { useState } from "react";
 import { ArrowRight, AlertCircle } from "lucide-react";
 
 const amounts: { value: number; impact: string }[] = [
-  { value: 10, impact: "Trauma-informed care for one displaced child" },
-  { value: 25, impact: "One full therapy session in the field" },
-  { value: 50, impact: "Trains a local clinician for a week" },
-  { value: 100, impact: "Sponsors one crisis-response deployment day" },
+  { value: 10, impact: "One trauma-care session for a displaced child" },
+  { value: 25, impact: "A full therapy session in the field — reaches 1 family" },
+  { value: 50, impact: "Trains 1 local clinician for a week → ~40 people treated over 12 months" },
+  { value: 100, impact: "One full crisis-response deployment day → ~25 people stabilised" },
 ];
 
 type Variant = "light" | "onImage";

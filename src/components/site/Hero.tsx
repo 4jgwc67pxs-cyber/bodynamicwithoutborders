@@ -23,7 +23,7 @@ export const Hero = () => {
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 safe-area-bottom">
         <div className="animate-fade-up">
           <h1 className="text-[2.5rem] leading-[1.05] font-display font-semibold text-white tracking-tight">
-            When the crisis<br />remains in the body.
+            Healing the wounds<br />war leaves in the body.
           </h1>
           <p className="mt-5 text-base text-white/90 max-w-sm mx-auto">
             We bring body-based trauma care to people living through war. Active in Ukraine since 2006 — now reaching Gaza, Syria, and refugees across Europe.
@@ -74,7 +74,7 @@ export const Hero = () => {
               Field-tested in Ukraine since 2006
             </span>
             <h1 className="mt-6 text-5xl lg:text-6xl xl:text-7xl font-display font-semibold text-white leading-[1.05] tracking-tight">
-              When the crisis<br />remains in the body.
+              Healing the wounds<br />war leaves in the body.
             </h1>
             <p className="mt-6 text-lg text-white/85 max-w-xl">
               We bring body-based trauma care to people living through war. Active in Ukraine since 2006 — now reaching Gaza, Syria, and refugee communities across Europe.
