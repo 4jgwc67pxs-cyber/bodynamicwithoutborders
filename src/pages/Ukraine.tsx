@@ -215,6 +215,65 @@ const Ukraine = () => {
           </div>
         </section>
 
+        {/* Further reading */}
+        <section className="py-20 md:py-24">
+          <div className="container-narrow">
+            <div className="max-w-2xl reveal">
+              <span className="eyebrow">Further reading</span>
+              <h2 className="mt-3 text-3xl md:text-4xl font-display font-semibold tracking-tight">
+                More from the field.
+              </h2>
+              <p className="mt-4 text-muted-foreground">
+                Articles and resources from the Bodynamic Institute on the Ukraine work.
+              </p>
+            </div>
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+              {[
+                {
+                  label: "Project",
+                  title: "Ukraine Veterans — project overview",
+                  href: "https://www.bodynamic.com/projects/ukraine-veterans/",
+                },
+                {
+                  label: "Article",
+                  title: "Reclaiming wholeness: Ukrainian veterans",
+                  href: "https://www.bodynamic.com/blog/reclaiming-wholeness-ukrainian-veterans/",
+                },
+                {
+                  label: "Manual",
+                  title: "Self-support manual: exercises for crisis work (EN / UA)",
+                  href: "https://www.bodynamic.com/blog/self-support-manual-exercises-for-crisis-work-in-english-ukrainian/",
+                },
+                {
+                  label: "Article",
+                  title: "Overcoming shock, trauma and PTSD — Bodynamic for Ukrainian veterans",
+                  href: "https://www.bodynamic.com/blog/overcoming-shock-trauma-and-ptsd-bodynamic-for-ukrainian-veterans/",
+                },
+              ].map((r, i) => (
+                <a
+                  key={r.href}
+                  href={r.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="reveal group bg-background border border-border rounded-sm p-6 hover:border-accent transition-colors flex items-start justify-between gap-4"
+                  style={{ transitionDelay: `${i * 60}ms` }}
+                >
+                  <div>
+                    <span className="text-[10px] font-semibold uppercase tracking-wider text-accent">
+                      {r.label}
+                    </span>
+                    <h3 className="mt-2 font-display text-lg font-semibold text-foreground group-hover:text-accent transition-colors">
+                      {r.title}
+                    </h3>
+                    <p className="mt-1 text-xs text-muted-foreground">bodynamic.com</p>
+                  </div>
+                  <ArrowRight size={18} className="shrink-0 mt-1 text-muted-foreground group-hover:text-accent group-hover:translate-x-0.5 transition-all" />
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Outcome */}
         <section className="py-20 md:py-28">
           <div className="container-narrow grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
