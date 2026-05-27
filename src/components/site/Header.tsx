@@ -5,7 +5,7 @@ import logo from "@/assets/logo.jpg";
 
 const links = [
   { href: "#work", label: "What we do" },
-  { href: "#ukraine", label: "Where we work" },
+  { href: "/#ukraine", label: "Where we work" },
   { href: "#impact", label: "Impact" },
   { href: "/stories", label: "Stories" },
   { href: "#about", label: "About" },
