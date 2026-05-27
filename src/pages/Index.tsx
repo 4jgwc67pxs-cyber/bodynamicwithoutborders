@@ -5,6 +5,7 @@ import { TrustStrip } from "@/components/site/TrustStrip";
 import { Stats } from "@/components/site/Stats";
 import { Method } from "@/components/site/Method";
 import { UkraineSection } from "@/components/site/UkraineSection";
+import { FieldVideo } from "@/components/site/FieldVideo";
 import { Work } from "@/components/site/Work";
 import { Team } from "@/components/site/Team";
 import { Partners } from "@/components/site/Partners";
@@ -38,6 +39,7 @@ const Index = () => {
         <Stats />
         <Method />
         <UkraineSection />
+        <FieldVideo />
         <Work />
         <Transparency />
         <Team />
