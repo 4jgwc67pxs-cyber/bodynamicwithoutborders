@@ -1,7 +1,12 @@
 import { useState } from "react";
-import { ArrowRight, Heart } from "lucide-react";
+import { ArrowRight, AlertCircle } from "lucide-react";
 
-const amounts = [10, 25, 50, 100];
+const amounts: { value: number; impact: string }[] = [
+  { value: 10, impact: "Trauma-informed care for one displaced child" },
+  { value: 25, impact: "One full therapy session in the field" },
+  { value: 50, impact: "Trains a local clinician for a week" },
+  { value: 100, impact: "Sponsors one crisis-response deployment day" },
+];
 
 type Variant = "light" | "onImage";
 
@@ -13,11 +18,14 @@ export const HeroDonateCard = ({ variant = "onImage" }: { variant?: Variant }) =
   const finalAmount = custom ? Number(custom) : amount;
 
   const impactLine = (() => {
-    if (!finalAmount || finalAmount < 1) return "Every contribution matters.";
-    if (finalAmount < 25) return "Funds one trauma session in the field.";
-    if (finalAmount < 75) return "Supports a week of community recovery work.";
-    if (finalAmount < 150) return "Trains a local clinician in trauma response.";
-    return "Sponsors a full crisis-response deployment day.";
+    if (custom) {
+      if (!finalAmount || finalAmount < 1) return "Every contribution funds direct field care.";
+      if (finalAmount < 25) return "Funds trauma care for displaced children.";
+      if (finalAmount < 75) return "Supports a week of community recovery work.";
+      if (finalAmount < 150) return "Trains local clinicians in trauma response.";
+      return "Sponsors full crisis-response deployment days.";
+    }
+    return amounts.find((a) => a.value === amount)?.impact ?? "";
   })();
 
   return (
@@ -50,12 +58,12 @@ export const HeroDonateCard = ({ variant = "onImage" }: { variant?: Variant }) =
       {/* Amount grid */}
       <div className="mt-3 grid grid-cols-2 gap-3">
         {amounts.map((a) => {
-          const active = !custom && amount === a;
+          const active = !custom && amount === a.value;
           return (
             <button
-              key={a}
+              key={a.value}
               onClick={() => {
-                setAmount(a);
+                setAmount(a.value);
                 setCustom("");
               }}
               className={`py-3.5 rounded-sm border font-display font-semibold text-base transition-all ${
@@ -64,7 +72,7 @@ export const HeroDonateCard = ({ variant = "onImage" }: { variant?: Variant }) =
                   : "border-border text-foreground hover:border-primary/40"
               }`}
             >
-              €{a} <span className="text-xs font-normal text-muted-foreground">
+              €{a.value} <span className="text-xs font-normal text-muted-foreground">
                 {frequency === "monthly" ? "/ mo" : ""}
               </span>
             </button>
@@ -87,10 +95,20 @@ export const HeroDonateCard = ({ variant = "onImage" }: { variant?: Variant }) =
         />
       </div>
 
-      {/* Impact line */}
-      <div className="mt-4 flex gap-2.5 items-start text-sm">
-        <Heart size={16} className="text-accent shrink-0 mt-0.5" />
-        <p className="text-muted-foreground leading-snug">{impactLine}</p>
+      {/* Impact line — concrete outcome */}
+      <div className="mt-4 px-3.5 py-3 rounded-sm bg-accent/10 border-l-2 border-accent">
+        <div className="text-[10px] font-bold uppercase tracking-wider text-accent mb-1">
+          Your impact
+        </div>
+        <p className="text-sm text-foreground leading-snug">{impactLine}</p>
+      </div>
+
+      {/* Urgency line */}
+      <div className="mt-3 flex gap-2 items-center text-xs">
+        <AlertCircle size={14} className="text-destructive shrink-0" />
+        <p className="text-muted-foreground">
+          <span className="font-semibold text-foreground">Right now:</span> 47 families on the Kharkiv waiting list. [edit]
+        </p>
       </div>
 
       {/* CTA */}
