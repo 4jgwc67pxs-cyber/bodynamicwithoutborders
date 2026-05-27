@@ -126,6 +126,14 @@ const Ukraine = () => {
                 Today, the work is Ukrainian-led. Our role is to keep training, keep funding the
                 frontline practitioners, and keep showing up.
               </p>
+              <a
+                href="https://www.bodynamic.com/projects/ukraine-veterans/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-2 text-accent hover:text-[hsl(var(--accent-hover))] font-medium transition-colors"
+              >
+                Read the full Ukraine project page on bodynamic.com →
+              </a>
             </div>
           </div>
         </section>
