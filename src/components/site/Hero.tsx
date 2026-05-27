@@ -26,7 +26,7 @@ export const Hero = () => {
             When the crisis<br />remains in the body.
           </h1>
           <p className="mt-5 text-base text-white/90 max-w-sm mx-auto">
-            Trauma-informed humanitarian response in conflict-affected regions.
+            We bring body-based trauma care to people living through war. Active in Ukraine since 2006 — now reaching Gaza, Syria, and refugees across Europe.
           </p>
           <div className="mt-10">
             <Button
@@ -77,7 +77,7 @@ export const Hero = () => {
               When the crisis<br />remains in the body.
             </h1>
             <p className="mt-6 text-lg text-white/85 max-w-xl">
-              Trauma-informed humanitarian response in conflict-affected and post-crisis regions.
+              We bring body-based trauma care to people living through war. Active in Ukraine since 2006 — now reaching Gaza, Syria, and refugee communities across Europe.
             </p>
           </div>
           <div className="col-span-5 flex justify-end animate-fade-up">

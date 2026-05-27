@@ -1,7 +1,7 @@
 const stats = [
-  { num: "20+", label: "Countries reached", sub: "Direct operations & partner-led programs" },
-  { num: "15+", label: "Years in Ukraine", sub: "Continuous presence since 2006" },
-  { num: "30,000+", label: "People reached", sub: "Veteran, displacement & clinical programs" },
+  { num: "2,400+", label: "People treated", sub: "In crisis zones and displacement camps [edit]" },
+  { num: "180", label: "Local clinicians trained", sub: "Building lasting in-country capacity [edit]" },
+  { num: "18 yrs", label: "On the ground in Ukraine", sub: "Continuous presence since 2006" },
   { num: "40→8%", label: "PTSD reduction", sub: "Documented in Ukraine veteran cohort" },
 ];
 
