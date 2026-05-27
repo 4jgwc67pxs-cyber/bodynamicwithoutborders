@@ -15,17 +15,17 @@ const videos = [
 ];
 
 export const FieldVideo = () => (
-  <section className="py-20 md:py-28 bg-foreground text-background">
+  <section className="py-20 md:py-28 bg-background text-foreground">
     <div className="container-narrow">
       {/* Header */}
       <div className="reveal max-w-2xl">
         <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-accent">
           From the field
         </span>
-        <h2 className="mt-4 font-display text-3xl md:text-4xl leading-tight text-background">
+        <h2 className="mt-4 font-display text-3xl md:text-4xl leading-tight text-foreground">
           Ukraine, in motion.
         </h2>
-        <p className="mt-5 text-lg text-background/70 leading-relaxed">
+        <p className="mt-5 text-lg text-foreground/60 leading-relaxed">
           Two windows into the work — a camp where children affected by the war
           relearn safety in their own bodies, and a training where Ukrainian
           clinicians take the method back into their practice.
@@ -36,7 +36,7 @@ export const FieldVideo = () => (
       <div className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10">
         {videos.map((v) => (
           <figure key={v.src} className="reveal">
-            <div className="relative w-full aspect-[9/16] bg-black rounded-sm overflow-hidden ring-1 ring-background/10 shadow-elegant">
+            <div className="relative w-full aspect-[9/16] bg-black rounded-sm overflow-hidden ring-1 ring-foreground/10 shadow-elegant">
               <video
                 src={v.src}
                 poster={v.poster}
@@ -49,7 +49,7 @@ export const FieldVideo = () => (
                 Field footage
               </span>
             </div>
-            <figcaption className="mt-4 text-xs uppercase tracking-wider text-background/50">
+            <figcaption className="mt-4 text-xs uppercase tracking-wider text-foreground/50">
               {v.caption}
             </figcaption>
           </figure>
