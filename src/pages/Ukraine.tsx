@@ -192,35 +192,6 @@ const Ukraine = () => {
                 loading="lazy"
               />
             </div>
-            {/* Video 4 — training clinicians (local, portrait) */}
-            <div className="mt-12 reveal grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 items-center">
-              <div className="md:col-span-5">
-                <div className="relative mx-auto w-full max-w-[360px] md:max-w-none aspect-[9/16] rounded-sm overflow-hidden border border-border shadow-soft bg-black">
-                  <video
-                    src="/videos/ukraine-training-clinicians-1.mp4"
-                    poster="/videos/ukraine-training-clinicians-1-poster.jpg"
-                    className="absolute inset-0 w-full h-full object-cover"
-                    controls
-                    playsInline
-                    preload="metadata"
-                  />
-                  <span className="absolute top-3 left-3 z-10 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-sm bg-background/90 text-foreground">
-                    Field footage
-                  </span>
-                </div>
-              </div>
-              <div className="md:col-span-7">
-                <span className="eyebrow">Equal-to-Equal training</span>
-                <h3 className="mt-3 font-display text-2xl md:text-3xl font-semibold tracking-tight">
-                  Training social workers and psychiatrists.
-                </h3>
-                <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Inside an Equal-to-Equal training with Ukrainian social workers and
-                  psychiatrists — learning the body-based tools they take back to their
-                  clinics, communities, and frontline practice.
-                </p>
-              </div>
-            </div>
           </div>
         </section>
 
