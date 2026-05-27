@@ -7,6 +7,8 @@ import { Method } from "@/components/site/Method";
 import { UkraineSection } from "@/components/site/UkraineSection";
 import { Work } from "@/components/site/Work";
 import { Team } from "@/components/site/Team";
+import { Partners } from "@/components/site/Partners";
+import { Governance } from "@/components/site/Governance";
 import { Story } from "@/components/site/Story";
 import { Global } from "@/components/site/Global";
 import { Transparency } from "@/components/site/Transparency";
@@ -39,6 +41,8 @@ const Index = () => {
         <Work />
         <Transparency />
         <Team />
+        <Partners />
+        <Governance />
         <Story />
         <Global />
         <Donate />
