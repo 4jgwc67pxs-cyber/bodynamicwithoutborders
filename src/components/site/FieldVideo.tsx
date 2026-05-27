@@ -7,7 +7,7 @@ export const FieldVideo = () => (
       <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-14 items-center">
         {/* Video frame — portrait, intentionally contained */}
         <figure className="reveal md:col-span-5 md:col-start-1">
-          <div className="relative mx-auto w-full max-w-[280px] md:max-w-none aspect-[9/16] bg-black rounded-sm overflow-hidden ring-1 ring-background/10 shadow-elegant">
+          <div className="relative mx-auto w-full max-w-none aspect-[9/16] bg-black rounded-sm overflow-hidden ring-1 ring-background/10 shadow-elegant">
             <video
               src="/videos/ukraine-training-camp.mp4"
               poster="/videos/ukraine-training-camp-poster.jpg"
