@@ -10,6 +10,7 @@ export const FieldVideo = () => (
           <div className="relative mx-auto w-full max-w-[280px] md:max-w-none aspect-[9/16] bg-black rounded-sm overflow-hidden ring-1 ring-background/10 shadow-elegant">
             <video
               src="/videos/ukraine-training-camp.mp4"
+              poster="/videos/ukraine-training-camp-poster.jpg"
               className="absolute inset-0 w-full h-full object-cover"
               controls
               playsInline
