@@ -176,19 +176,21 @@ const Ukraine = () => {
                 loading="lazy"
               />
             </div>
-            {/* Placeholder video 2 — add YouTube embed URL here */}
+            {/* Video 3 */}
             <div className="mt-10 reveal">
               <p className="text-muted-foreground max-w-xl">
                 <em>[Add video description here]</em>
               </p>
             </div>
-            <div className="mt-3 relative w-full aspect-video rounded-sm border-2 border-dashed border-accent/40 bg-muted flex items-center justify-center group">
-              <div className="text-center space-y-2 px-6">
-                <span className="inline-block px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-semibold uppercase tracking-wider">
-                  Video 3
-                </span>
-                <p className="text-sm text-muted-foreground font-medium">Paste YouTube embed code here</p>
-              </div>
+            <div className="mt-3 relative w-full aspect-video rounded-sm overflow-hidden border border-border shadow-soft bg-muted">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube-nocookie.com/embed/V5R7rnLtn-s?rel=0"
+                title="Ukraine video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                loading="lazy"
+              />
             </div>
           </div>
         </section>
