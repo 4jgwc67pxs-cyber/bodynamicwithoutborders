@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.jpg";
+import { useAuth } from "@/hooks/useAuth";
 
 const links = [
   { href: "#work", label: "What we do" },
@@ -13,6 +14,7 @@ const links = [
 
 export const Header = () => {
   const [open, setOpen] = useState(false);
+  const { user } = useAuth();
 
   return (
     <header className="sticky top-0 inset-x-0 z-50 bg-background border-b border-border">
@@ -49,6 +51,12 @@ export const Header = () => {
         </nav>
 
         <div className="flex items-center gap-2">
+          <Link
+            to={user ? "/account" : "/auth"}
+            className="hidden sm:inline-flex text-sm font-medium text-foreground/70 hover:text-primary px-3 py-2"
+          >
+            {user ? "Account" : "Sign in"}
+          </Link>
           <a
             href="#donate"
             className="inline-flex items-center gap-2 bg-accent hover:bg-[hsl(var(--accent-hover))] text-accent-foreground px-5 py-2.5 md:px-5 md:py-2.5 rounded-sm text-sm font-semibold tracking-wide transition-all shadow-soft hover:shadow-elegant hover:-translate-y-0.5"
