@@ -4,9 +4,8 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/logo.jpg";
 
 const links = [
-  { href: "#home", label: "Home" },
-  { href: "#ukraine", label: "Ukraine" },
   { href: "#work", label: "What we do" },
+  { href: "#ukraine", label: "Where we work" },
   { href: "#impact", label: "Impact" },
   { href: "/stories", label: "Stories" },
   { href: "#about", label: "About" },
