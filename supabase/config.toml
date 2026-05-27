@@ -1,1 +1,13 @@
 project_id = "wgifurfmqatcknaonbuh"
+
+[functions.create-checkout]
+verify_jwt = false
+
+[functions.create-donation-checkout]
+verify_jwt = false
+
+[functions.create-portal-session]
+verify_jwt = false
+
+[functions.payments-webhook]
+verify_jwt = false
