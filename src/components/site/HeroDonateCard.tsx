@@ -1,5 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ArrowRight, AlertCircle } from "lucide-react";
+import { DonationCheckoutModal, CheckoutRequest } from "@/components/DonationCheckoutModal";
+import { useAuth } from "@/hooks/useAuth";
+import { toast } from "sonner";
 
 const amounts: { value: number; impact: string }[] = [
   { value: 10, impact: "One trauma-care session for a displaced child" },
@@ -8,12 +12,22 @@ const amounts: { value: number; impact: string }[] = [
   { value: 100, impact: "One full crisis-response deployment day → ~25 people stabilised" },
 ];
 
+const MONTHLY_TIER_PRICE: Record<number, string> = {
+  10: "donation_monthly_10",
+  25: "donation_monthly_25",
+  50: "donation_monthly_50",
+  100: "donation_monthly_100",
+};
+
 type Variant = "light" | "onImage";
 
 export const HeroDonateCard = ({ variant = "onImage" }: { variant?: Variant }) => {
   const [frequency, setFrequency] = useState<"once" | "monthly">("monthly");
   const [amount, setAmount] = useState<number>(50);
   const [custom, setCustom] = useState<string>("");
+  const [checkout, setCheckout] = useState<CheckoutRequest | null>(null);
+  const { user } = useAuth();
+  const navigate = useNavigate();
 
   const finalAmount = custom ? Number(custom) : amount;
 
@@ -28,7 +42,39 @@ export const HeroDonateCard = ({ variant = "onImage" }: { variant?: Variant }) =
     return amounts.find((a) => a.value === amount)?.impact ?? "";
   })();
 
+  const handleDonate = () => {
+    if (!finalAmount || finalAmount < 1) {
+      toast.error("Please enter an amount of at least €1");
+      return;
+    }
+    const cents = Math.round(finalAmount * 100);
+
+    if (frequency === "monthly") {
+      if (!user) {
+        toast.message("Sign in to start a monthly donation", {
+          description: "So you can manage or cancel it anytime.",
+        });
+        navigate(`/auth?redirect=${encodeURIComponent("/#donate")}`);
+        return;
+      }
+      const tierPriceId = !custom ? MONTHLY_TIER_PRICE[amount] : undefined;
+      setCheckout({
+        kind: "subscription",
+        priceId: tierPriceId,
+        customAmountCents: tierPriceId ? undefined : cents,
+      });
+    } else {
+      setCheckout({
+        kind: "donation",
+        amountCents: cents,
+        customerEmail: user?.email,
+        userId: user?.id,
+      });
+    }
+  };
+
   return (
+    <>
     <div
       className={`w-full max-w-[440px] bg-white rounded-md p-6 md:p-7 text-foreground shadow-elegant ${
         variant === "onImage" ? "ring-1 ring-black/5" : ""
@@ -112,7 +158,10 @@ export const HeroDonateCard = ({ variant = "onImage" }: { variant?: Variant }) =
       </div>
 
       {/* CTA */}
-      <button className="mt-5 w-full inline-flex items-center justify-center gap-2 bg-accent hover:bg-[hsl(var(--accent-hover))] text-accent-foreground py-3.5 rounded-sm font-semibold shadow-soft transition-all hover:-translate-y-0.5">
+      <button
+        onClick={handleDonate}
+        className="mt-5 w-full inline-flex items-center justify-center gap-2 bg-accent hover:bg-[hsl(var(--accent-hover))] text-accent-foreground py-3.5 rounded-sm font-semibold shadow-soft transition-all hover:-translate-y-0.5"
+      >
         {frequency === "monthly" ? "Join today" : `Donate €${finalAmount || 0}`}
         <ArrowRight size={18} />
       </button>
@@ -121,5 +170,7 @@ export const HeroDonateCard = ({ variant = "onImage" }: { variant?: Variant }) =
         Secure payment · Cancel anytime
       </p>
     </div>
+    {checkout && <DonationCheckoutModal request={checkout} onClose={() => setCheckout(null)} />}
+    </>
   );
 };
