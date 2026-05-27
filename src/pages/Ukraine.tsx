@@ -130,6 +130,31 @@ const Ukraine = () => {
           </div>
         </section>
 
+        {/* Video */}
+        <section className="py-16 md:py-20">
+          <div className="container-narrow">
+            <div className="reveal">
+              <span className="eyebrow">In the field</span>
+              <h2 className="mt-3 text-3xl md:text-4xl font-display font-semibold tracking-tight max-w-2xl">
+                See the work in action.
+              </h2>
+              <p className="mt-4 text-muted-foreground max-w-xl">
+                Volunteers treating soldiers returning from the frontline at a crisis rehabilitation camp in Ukraine.
+              </p>
+            </div>
+            <div className="mt-10 relative w-full aspect-video rounded-sm overflow-hidden border border-border shadow-soft bg-muted">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube-nocookie.com/embed/BURtfIU0EFk?rel=0"
+                title="Ukraine Crisis Rehabilitation Camp"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
+
         {/* Programs */}
         <section className="py-20 md:py-24 bg-muted/30 border-y border-border">
           <div className="container-narrow">
