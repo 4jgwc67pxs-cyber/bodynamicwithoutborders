@@ -6,7 +6,7 @@ import { Footer } from "@/components/site/Footer";
 
 const Terms = () => {
   useEffect(() => {
-    document.title = "Terms of Use — Bodynamic Without Borders";
+    document.title = "Terms of Use — Bodynamic Humanity";
   }, []);
 
   return (
@@ -38,7 +38,7 @@ const Terms = () => {
             <section>
               <h2 className="font-display text-2xl text-primary mb-3">2. Purpose of the site</h2>
               <p>
-                This website provides information about Bodynamic Without Borders, our
+                This website provides information about Bodynamic Humanity, our
                 trauma-informed humanitarian work, and the option to support our programs through
                 donations. Content is for informational purposes and does not constitute medical or
                 clinical advice.

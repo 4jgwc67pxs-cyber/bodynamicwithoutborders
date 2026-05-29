@@ -12,7 +12,7 @@ export const Footer = () => (
               <img src={logo} alt="" className="w-full h-full object-cover" />
             </span>
             <span className="font-display font-semibold text-primary">
-              Bodynamic <em className="not-italic font-normal text-muted-foreground">Without Borders</em>
+              Bodynamic <em className="not-italic font-normal text-muted-foreground">Humanity</em>
             </span>
           </div>
           <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-xs">
@@ -49,7 +49,7 @@ export const Footer = () => (
         </div>
       </div>
       <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between gap-3 text-xs text-muted-foreground">
-        <span>© 2026 Bodynamic Without Borders — Trauma-informed humanitarian response.</span>
+        <span>© 2026 Bodynamic Humanity — Trauma-informed humanitarian response.</span>
         <span>All rights reserved.</span>
       </div>
     </div>

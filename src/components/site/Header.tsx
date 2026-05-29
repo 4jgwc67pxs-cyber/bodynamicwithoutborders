@@ -30,10 +30,10 @@ export const Header = () => {
 
           <a href="#home" className="flex items-center gap-3 group">
             <span className="w-11 h-11 md:w-10 md:h-10 rounded-md overflow-hidden bg-primary shrink-0">
-              <img src={logo} alt="Bodynamic Without Borders" className="w-full h-full object-cover" />
+              <img src={logo} alt="Bodynamic Humanity" className="w-full h-full object-cover" />
             </span>
             <span className="hidden sm:inline font-display text-base md:text-lg font-semibold text-primary leading-tight">
-              Bodynamic <em className="not-italic font-normal text-muted-foreground">Without Borders</em>
+              Bodynamic <em className="not-italic font-normal text-muted-foreground">Humanity</em>
             </span>
           </a>
         </div>

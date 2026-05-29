@@ -25,7 +25,7 @@ export const Team = () => (
           Talk therapy stops at the edge of a warzone. We don't.
         </h2>
         <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-          Bodynamic Without Borders was founded in 2006 after our team worked with survivors of
+          Bodynamic Humanity was founded in 2006 after our team worked with survivors of
           mass-scale violence and saw the same pattern: trauma lodges in the body long after the
           mind has tried to move on. Conventional therapy wasn't reaching people in active conflict
           — so we built a body-based method that does. [edit]

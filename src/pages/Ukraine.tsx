@@ -43,7 +43,7 @@ const Ukraine = () => {
   useReveal();
 
   useEffect(() => {
-    document.title = "Ukraine — Bodynamic Without Borders";
+    document.title = "Ukraine — Bodynamic Humanity";
     const meta =
       document.querySelector('meta[name="description"]') ||
       Object.assign(document.createElement("meta"), { name: "description" });

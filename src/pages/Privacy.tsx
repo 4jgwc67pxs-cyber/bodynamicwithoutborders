@@ -6,7 +6,7 @@ import { Footer } from "@/components/site/Footer";
 
 const Privacy = () => {
   useEffect(() => {
-    document.title = "Privacy Policy — Bodynamic Without Borders";
+    document.title = "Privacy Policy — Bodynamic Humanity";
   }, []);
 
   return (
@@ -30,7 +30,7 @@ const Privacy = () => {
             <section>
               <h2 className="font-display text-2xl text-primary mb-3">1. Who we are</h2>
               <p>
-                Bodynamic Without Borders ("we", "us") is a humanitarian initiative providing
+                Bodynamic Humanity ("we", "us") is a humanitarian initiative providing
                 trauma-informed support in conflict and crisis regions. This policy explains how we
                 handle personal information collected via this website.
               </p>

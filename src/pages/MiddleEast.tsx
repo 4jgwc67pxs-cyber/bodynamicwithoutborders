@@ -27,7 +27,7 @@ const MiddleEast = () => {
   useReveal();
 
   useEffect(() => {
-    document.title = "Middle East — Bodynamic Without Borders";
+    document.title = "Middle East — Bodynamic Humanity";
     const meta =
       document.querySelector('meta[name="description"]') ||
       Object.assign(document.createElement("meta"), { name: "description" });
