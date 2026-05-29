@@ -47,7 +47,7 @@ const Stories = () => {
   useReveal();
 
   useEffect(() => {
-    document.title = "Stories — Bodynamic Without Borders";
+    document.title = "Stories — Bodynamic Humanity";
     const meta =
       document.querySelector('meta[name="description"]') ||
       Object.assign(document.createElement("meta"), { name: "description" });

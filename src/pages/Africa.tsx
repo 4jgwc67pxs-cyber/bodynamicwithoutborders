@@ -9,7 +9,7 @@ const Africa = () => {
   useReveal();
 
   useEffect(() => {
-    document.title = "Africa — Bodynamic Without Borders";
+    document.title = "Africa — Bodynamic Humanity";
     const meta =
       document.querySelector('meta[name="description"]') ||
       Object.assign(document.createElement("meta"), { name: "description" });

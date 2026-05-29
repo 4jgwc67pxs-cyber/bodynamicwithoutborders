@@ -21,7 +21,7 @@ const Index = () => {
   useReveal();
 
   useEffect(() => {
-    document.title = "Bodynamic Without Borders — Trauma-informed humanitarian response";
+    document.title = "Bodynamic Humanity — Trauma-informed humanitarian response";
     const meta = document.querySelector('meta[name="description"]') ||
       Object.assign(document.createElement("meta"), { name: "description" });
     meta.setAttribute("content",
