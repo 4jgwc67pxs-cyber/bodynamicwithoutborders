@@ -73,7 +73,7 @@ const Ukraine = () => {
               Ukraine: where the work was built.
             </h1>
             <p className="mt-5 text-lg text-white/85 max-w-2xl">
-              For 18 years we've worked alongside Ukrainian communities — with veterans, displaced
+              For 20 years we've worked alongside Ukrainian communities — with veterans, displaced
               families, and the clinicians who care for them.
             </p>
           </div>

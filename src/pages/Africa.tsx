@@ -54,7 +54,7 @@ const Africa = () => {
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed">
               We don't have a deployment date and we won't fake one. What we have is a method
-              that works in conflict settings, a track record across 18 years, and a commitment
+              that works in conflict settings, a track record across 20 years, and a commitment
               to building this with local clinicians — not on top of them. [edit]
             </p>
             <p className="text-lg text-foreground font-medium">
