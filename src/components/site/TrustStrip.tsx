@@ -14,7 +14,7 @@ const items = [
   {
     icon: Clock,
     label: "In the field",
-    value: "18 years, since 2006",
+    value: "20 years, since 2006",
   },
 ];
 
