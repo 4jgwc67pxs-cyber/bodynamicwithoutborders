@@ -1,10 +1,27 @@
-const partners = [
-  "Ministry of Health [edit]",
-  "Armed Forces of Ukraine",
-  "Veteran Hub",
-  "UNHCR partner [edit]",
-  "Bodynamic Institute",
-  "University partner [edit]",
+import ucAdvocacyLogo from "@/assets/partner-uc-advocacy.png";
+import raiseLogo from "@/assets/partner-raise.svg";
+
+type Partner = {
+  name: string;
+  href?: string;
+  logo?: string;
+};
+
+const partners: Partner[] = [
+  {
+    name: "UC Advocacy Group",
+    href: "https://www.ucadvocacygroup.org",
+    logo: ucAdvocacyLogo,
+  },
+  {
+    name: "Raise.UA",
+    href: "https://raise.com.ua/en",
+    logo: raiseLogo,
+  },
+  { name: "Armed Forces of Ukraine" },
+  { name: "Veteran Hub" },
+  { name: "Bodynamic Institute" },
+  { name: "Ministry of Health [edit]" },
 ];
 
 export const Partners = () => (
@@ -18,14 +35,40 @@ export const Partners = () => (
       </div>
 
       <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-px bg-border rounded-sm overflow-hidden reveal">
-        {partners.map((p) => (
-          <div
-            key={p}
-            className="bg-background flex items-center justify-center px-4 py-8 text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors"
-          >
-            {p}
-          </div>
-        ))}
+        {partners.map((p) => {
+          const content = p.logo ? (
+            <img
+              src={p.logo}
+              alt={p.name}
+              className="max-h-12 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+              loading="lazy"
+            />
+          ) : (
+            <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground group-hover:text-foreground transition-colors">
+              {p.name}
+            </span>
+          );
+
+          const className =
+            "group bg-background flex items-center justify-center px-4 py-8 text-center min-h-[110px]";
+
+          return p.href ? (
+            <a
+              key={p.name}
+              href={p.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={p.name}
+              className={className}
+            >
+              {content}
+            </a>
+          ) : (
+            <div key={p.name} className={className}>
+              {content}
+            </div>
+          );
+        })}
       </div>
     </div>
   </section>
