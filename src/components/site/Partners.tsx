@@ -1,5 +1,6 @@
 import ucAdvocacyAsset from "@/assets/partner-uc-advocacy.webp.asset.json";
 import raiseAsset from "@/assets/partner-raise.png.asset.json";
+import bodynamicAsset from "@/assets/partner-bodynamic.png.asset.json";
 
 type Partner = {
   name: string;
@@ -20,7 +21,11 @@ const partners: Partner[] = [
   },
   { name: "Armed Forces of Ukraine" },
   { name: "Veteran Hub" },
-  { name: "Bodynamic Institute" },
+  {
+    name: "Bodynamic International",
+    href: "https://www.bodynamic.com",
+    logo: bodynamicAsset.url,
+  },
   { name: "Ministry of Health [edit]" },
 ];
 
