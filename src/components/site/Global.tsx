@@ -49,10 +49,6 @@ export const Global = () => (
             <div className="absolute top-4 left-4 bg-background/90 backdrop-blur px-3 py-1 rounded-sm text-xs font-medium text-primary">
               Partners
             </div>
-            <div className="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-primary/90 to-transparent text-white text-sm">
-              <div className="font-medium">APA — Society for Military Psychology</div>
-              <div className="text-white/70 text-xs">2023</div>
-            </div>
           </div>
         </div>
       </div>
