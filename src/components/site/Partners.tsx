@@ -1,5 +1,5 @@
-import ucAdvocacyLogo from "@/assets/partner-uc-advocacy.png";
-import raiseLogo from "@/assets/partner-raise.svg";
+import ucAdvocacyAsset from "@/assets/partner-uc-advocacy.webp.asset.json";
+import raiseAsset from "@/assets/partner-raise.png.asset.json";
 
 type Partner = {
   name: string;
@@ -11,12 +11,12 @@ const partners: Partner[] = [
   {
     name: "UC Advocacy Group",
     href: "https://www.ucadvocacygroup.org",
-    logo: ucAdvocacyLogo,
+    logo: ucAdvocacyAsset.url,
   },
   {
     name: "Raise.UA",
     href: "https://raise.com.ua/en",
-    logo: raiseLogo,
+    logo: raiseAsset.url,
   },
   { name: "Armed Forces of Ukraine" },
   { name: "Veteran Hub" },
