@@ -5,18 +5,18 @@ const videos = [
   {
     src: "/videos/ukraine-training-camp.mp4",
     poster: "/videos/ukraine-training-camp-poster.jpg",
-    caption: "Children's Workshop · Raise.UA partner program · Ukraine",
+    caption: "Children's Workshop · Raise.UA rehabilitation program · Ukraine",
     title: "Bodynamic Workshop for Children",
     description:
-      "Delivered as part of the Raise.UA rehabilitation program. Bodynamic participated as an invited partner of Raise.UA — an ecosystem for building a resilient generation in Ukraine — facilitating activities that support resilience, self-regulation, connection, and healthy development in children.",
+      "Conducted as part of Raise.UA — an ecosystem for building a resilient generation in Ukraine. Bodynamic participated as an invited partner, delivering a workshop for children within the Raise.UA rehabilitation program that supports resilience, self-regulation, connection, and healthy development.",
   },
   {
     src: "/videos/ukraine-training-clinicians-1.mp4",
     poster: "/videos/ukraine-training-clinicians-1-poster.jpg",
-    caption: "Professionals' Training · Raise.UA partner program · Ukraine",
+    caption: "Professionals' Training · Raise.UA rehabilitation program · Ukraine",
     title: "Bodynamic Training for Professionals",
     description:
-      "Delivered as part of the Raise.UA rehabilitation program. Bodynamic participated as an invited partner of Raise.UA — an ecosystem for building a resilient generation in Ukraine — providing training and practical tools for professionals working with children, families, and communities.",
+      "Conducted as part of Raise.UA — an ecosystem for building a resilient generation in Ukraine. Bodynamic participated as an invited partner, delivering training and practical tools for professionals working with children, families, and communities within the Raise.UA rehabilitation program.",
   },
 ];
 
