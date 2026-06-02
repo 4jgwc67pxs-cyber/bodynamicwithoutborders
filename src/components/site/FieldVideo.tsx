@@ -5,12 +5,18 @@ const videos = [
   {
     src: "/videos/ukraine-training-camp.mp4",
     poster: "/videos/ukraine-training-camp-poster.jpg",
-    caption: "Children's camp · Ukraine · 2025",
+    caption: "Children's Workshop · Raise.UA partner program · Ukraine",
+    title: "Bodynamic Workshop for Children",
+    description:
+      "Delivered as part of the Raise.UA rehabilitation program. Bodynamic participated as an invited partner of Raise.UA — an ecosystem for building a resilient generation in Ukraine — facilitating activities that support resilience, self-regulation, connection, and healthy development in children.",
   },
   {
     src: "/videos/ukraine-training-clinicians-1.mp4",
     poster: "/videos/ukraine-training-clinicians-1-poster.jpg",
-    caption: "Clinician training · Ukraine · 2025",
+    caption: "Professionals' Training · Raise.UA partner program · Ukraine",
+    title: "Bodynamic Training for Professionals",
+    description:
+      "Delivered as part of the Raise.UA rehabilitation program. Bodynamic participated as an invited partner of Raise.UA — an ecosystem for building a resilient generation in Ukraine — providing training and practical tools for professionals working with children, families, and communities.",
   },
 ];
 
@@ -49,8 +55,16 @@ export const FieldVideo = () => (
                 Field footage
               </span>
             </div>
-            <figcaption className="mt-4 text-xs uppercase tracking-wider text-foreground/50">
-              {v.caption}
+            <figcaption className="mt-4">
+              <div className="text-xs uppercase tracking-wider text-foreground/50">
+                {v.caption}
+              </div>
+              <h3 className="mt-2 font-display text-lg text-foreground">
+                {v.title}
+              </h3>
+              <p className="mt-2 text-sm text-foreground/60 leading-relaxed">
+                {v.description}
+              </p>
             </figcaption>
           </figure>
         ))}
