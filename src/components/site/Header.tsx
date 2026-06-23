@@ -35,6 +35,9 @@ export const Header = () => {
             <span className="hidden sm:inline font-display text-base md:text-lg font-semibold text-primary leading-tight">
               Bodynamic <em className="not-italic font-normal text-muted-foreground">Humanity</em>
             </span>
+            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold tracking-wide bg-muted text-muted-foreground border border-border">
+              Beta
+            </span>
           </a>
         </div>
 
