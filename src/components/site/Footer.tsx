@@ -49,7 +49,10 @@ export const Footer = () => (
         </div>
       </div>
       <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between gap-3 text-xs text-muted-foreground">
-        <span>© 2026 Bodynamic Humanity — Trauma-informed humanitarian response.</span>
+        <div className="flex flex-col gap-1">
+          <span>© 2026 Bodynamic Humanity — Trauma-informed humanitarian response.</span>
+          <span className="text-muted-foreground/80">With care — Lucca</span>
+        </div>
         <span>All rights reserved.</span>
       </div>
     </div>
